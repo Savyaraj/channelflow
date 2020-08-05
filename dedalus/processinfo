@@ -1,0 +1,9 @@
+Command:  simulateflow -T 1 newfield.nc 
+PWD:      /home/savya/Work/ecps/channelflow/dedalus
+Host:     savya-X510UNR, PID: 28851
+Time:     2020-07-22 11:49:45
+Version:  2.0.2
+Git rev:  9f099a4079b8ffe8b22128afc4f6b02bae9a0b7f
+Compiler: GNU 7.4.0
+
+

@@ -1,0 +1,4 @@
+Wed Jul 22 23:49:22 2020	28825	randomfield -Nx 48 -Ny 81 -Nz 32 -Lx 3 -Lz 2 newfield.nc 
+Thu Jul 23 00:29:36 2020	6128	randomfield -Nx 1024 -Ny 81 -Nz 32 -Lx 8 -Lz 2 newfield.nc 
+Fri Jul 24 18:17:48 2020	9935	randomfield -Nx 64 -Ny 64 -Nz 16 -Lx 25 -Lz 1 newfield.nc 
+Sun Jul 26 15:40:34 2020	2755	randomfield -Nx 8 -Ny 8 -Nz 4 -Lx 25.0 -Lz 1.0 -ymin 0.0 -ymax 25.0 newfield.nc 
