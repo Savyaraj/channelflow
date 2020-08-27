@@ -1,0 +1,2 @@
+Thu Aug 27 14:30:21 2020	10242	continuesoln --continuation P -al -Nn 100 -T 40 -dmu -0.001 -eqb sample.nc 
+Thu Aug 27 15:10:08 2020	11213	continuesoln --continuation P -al -Nn 100 -T 40 --dmu -0.001 -es 1e-10 -eqb sample.nc 

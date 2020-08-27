@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <iostream>
 #include <Python.h>
+#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 #include "numpy/arrayobject.h"
-
 #include "channelflow/flowfield.h"
 #include <Eigen/Dense>
 #include "numpy/numpyconfig.h"
-#ifdef NPY_1_7_API_VERSION
-#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
-#define NPE_PY_ARRAY_OBJECT PyArrayObject
-#else
-#define NPE_PY_ARRAY_OBJECT PyObject
-#endif
+// #ifdef NPY_1_7_API_VERSION
+// #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+// #define NPE_PY_ARRAY_OBJECT PyArrayObject
+// #else
+// #define NPE_PY_ARRAY_OBJECT PyObject
+// #endif
 
 int main() {
 
@@ -23,7 +23,7 @@ int main() {
 
 	Py_Initialize();
 	import_array()
-	module_name = PyUnicode_FromString("dedalus_example_3D");
+	module_name = PyUnicode_FromString("swift_hohenberg");
 	module = PyImport_Import(module_name);
 	Py_DECREF(module_name);
 	dict = PyModule_GetDict(module);
@@ -35,9 +35,9 @@ int main() {
 
 	//Creating flowfield object
 	std::cout<<"Creating flowfield...\n";
-	const int Nx = 8, Ny = 4, Nz = 8, Nd = 3;
-    const double Lx = 25.0, Lz = 1.0;
-    const double a = 0.0, b = 25.0;
+	const int Nx = 1024, Ny = 1, Nz = 1, Nd = 1;
+    const double Lx = 1.0, Lz = 1.0;
+    const double a = 0.0, b = 1.0;
 	chflow::FlowField u_init(Nx, Ny, Nz, Nd, Lx, Lz, a, b, NULL); //, chflow::Physical, chflow::Physical);
     // chflow::FlowField u_init("newfield",NULL); 
     std::cout<<"Flowfield created!"<<std::endl;
@@ -71,7 +71,7 @@ int main() {
 	// double *ptr = v.data();
 	// npy_intp dims[1] = { v.size() };
 	py_array = PyArray_SimpleNewFromData(1, dims, NPY_FLOAT, ptr);
-	double T = 2e-4;
+	double T = 10;
 	PyObject* T_py = Py_BuildValue("d", T);
 	//Test the instance method "advance" for timestepping and print output
 	// PyObject *u = PyObject_CallMethod(object, "advance","()");
@@ -84,9 +84,12 @@ int main() {
 	int dim = PyArray_Size(u);
 	std::cout<<"The size of output array is: "<<dim<<std::endl;
 
-    double* u_c = reinterpret_cast<double*>(PyArray_DATA(u));
+	npy_intp u_c_ind[4]{0,0,0,0}; 
+	double* u_c = reinterpret_cast<double*>(PyArray_GetPtr((PyArrayObject*)u, u_c_ind));
+
+    // double* u_c = reinterpret_cast<double*>(PyArray_DATA(contig));
 	for (int i=0; i<10; i++){
-		std::cout<<u_c[i]<<std::endl;
+		std::cout<<u_c[i,0,0,0]<<std::endl;
 	}
 
 	//Convert this array back to Flowfield format

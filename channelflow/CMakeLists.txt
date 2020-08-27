@@ -56,11 +56,12 @@ if (WITH_NSOLVER)
         chflow_SOURCES ${chflow_SOURCES}
         ${CMAKE_CURRENT_SOURCE_DIR}/cfdsi.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/laurettedsi.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/dedalusdsi.cpp
     )
     set(
         chflow_HEADERS ${chflow_HEADERS}
         ${CMAKE_CURRENT_SOURCE_DIR}/cfdsi.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/laurettedsi.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/dedalusdsi.h
     )
 endif ()
 

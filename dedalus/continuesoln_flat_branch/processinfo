@@ -1,0 +1,9 @@
+Command:  findsoln -eqb -Nn 50 -T 100 sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus
+Host:     savya-X510UNR, PID: 28687
+Time:     2020-08-19 02:58:15
+Version:  2.0.2
+Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Compiler: GNU 7.5.0
+
+

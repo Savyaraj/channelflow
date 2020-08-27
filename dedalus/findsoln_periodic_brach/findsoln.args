@@ -1,0 +1,8 @@
+Wed Aug 19 15:03:32 2020	29099	findsoln -eqb -Nn 50 -T 100 sample.nc 
+Wed Aug 19 15:30:29 2020	32561	findsoln -eqb -Nn 1 -T 100 sample.nc 
+Wed Aug 19 15:35:18 2020	1799	findsoln -eqb -Nn 50 -T 100 sample.nc 
+Wed Aug 19 15:38:34 2020	2053	findsoln -eqb -Nn 1 -T 100 sample.nc 
+Wed Aug 19 15:40:33 2020	3013	findsoln -eqb -Nn 1 -T 100 sample.nc 
+Wed Aug 19 15:41:39 2020	3102	findsoln -eqb -Nn 50 -T 100 sample.nc 
+Thu Aug 20 01:05:28 2020	22350	findsoln -eqb -T 100 -es 1e-3 -Nn 50 sample.nc 
+Thu Aug 20 01:17:10 2020	26444	findsoln -eqb -T 100 -es 1e-4 -Nn 50 sample.nc 

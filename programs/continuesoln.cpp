@@ -6,6 +6,7 @@
 #include <iostream>
 #include "cfbasics/cfbasics.h"
 #include "channelflow/cfdsi.h"
+#include "channelflow/dedalusdsi.h"
 #include "channelflow/flowfield.h"
 #include "nsolver/nsolver.h"
 
@@ -37,6 +38,7 @@ int main(int argc, char* argv[]) {
         const Real EPSILON = 1e-13;
 
         DNSFlags dnsflags(args, searchflags.laurette);
+        dnsflags.dPdx = 0.01;
         TimeStep dt(dnsflags);
         dnsflags.save();
 
@@ -99,8 +101,8 @@ int main(int argc, char* argv[]) {
         FieldSymmetry sigma[3];
         cfarray<Real> mu(3);
         Real T[3];
-        unique_ptr<cfDSI> dsi;
-        dsi = unique_ptr<cfDSI>(new cfDSI());
+        unique_ptr<dedalusDSI> dsi;
+        dsi = unique_ptr<dedalusDSI>(new dedalusDSI());
 
         if (restart) {
             cout << "Restarting from previous solutions. Please be aware that the DNSFlags "
@@ -224,7 +226,10 @@ int main(int argc, char* argv[]) {
         }
         // end superfluous output
 
-        dsi = unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma[0], 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize,
+        // dsi = unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma[0], 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize,
+        //                                   Unormalize, u[0], N->getLogstream()));
+
+        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(dnsflags, sigma[0], 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize,
                                           Unormalize, u[0], N->getLogstream()));
 
         cout << setprecision(8);

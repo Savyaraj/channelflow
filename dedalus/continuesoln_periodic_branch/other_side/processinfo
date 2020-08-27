@@ -1,0 +1,9 @@
+Command:  continuesoln --continuation P -al -eqb -es 1e-11 -T 100 -dmu -0.001 -np0 4 -np1 4 sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/continuesoln_periodic_branch/other_side
+Host:     savya-X510UNR, PID: 26200
+Time:     2020-08-27 05:15:39
+Version:  2.0.2
+Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Compiler: GNU 7.5.0
+
+

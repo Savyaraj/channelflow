@@ -1,9 +1,9 @@
-Command:  simulateflow -T 1 newfield.nc 
-PWD:      /home/savya/Work/ecps/channelflow/dedalus
-Host:     savya-X510UNR, PID: 28851
-Time:     2020-07-22 11:49:45
+Command:  ./a.out -eqb sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus
+Host:     savya-X510UNR, PID: 21502
+Time:     2020-08-27 04:35:25
 Version:  2.0.2
-Git rev:  9f099a4079b8ffe8b22128afc4f6b02bae9a0b7f
-Compiler: GNU 7.4.0
+Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Compiler: GNU 7.5.0
 
 

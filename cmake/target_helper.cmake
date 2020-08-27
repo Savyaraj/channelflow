@@ -24,7 +24,7 @@ function(install_channelflow_library name)
         $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}>
         $<INSTALL_INTERFACE:include>
     )
-    target_link_libraries(${name} PUBLIC cfbasics)
+    target_link_libraries(${name} PUBLIC cfbasics python3.6m)
     install(TARGETS ${name} DESTINATION lib)
     set_warning_flags(${name})
 
@@ -68,7 +68,7 @@ function(install_channelflow_application name destination)
     # message(STATUS "Building application: ${name} (with target name "${app_name}")
 
     add_executable(${app_name} ${name}.cpp)
-    target_link_libraries(${app_name} PUBLIC chflow)
+    target_link_libraries(${app_name} PUBLIC chflow python3.6m)
     set_warning_flags(${app_name})
     set_target_properties(${app_name} PROPERTIES OUTPUT_NAME ${name})
 

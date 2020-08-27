@@ -1,0 +1,22 @@
+Wed Aug 19 17:23:25 2020	11345	findsoln -eqb sample.nc 
+Wed Aug 19 17:26:22 2020	11765	findsoln -eqb -Nn 50 -T 100 sample.nc 
+Wed Aug 19 17:30:45 2020	12054	findsoln -eqb -Nn 50 -T 100 sample.nc 
+Wed Aug 19 17:35:43 2020	12661	findsoln -eqb -Nn 100 -T 100 sample.nc 
+Wed Aug 19 17:37:24 2020	12793	findsoln -eqb -Nn 100 -T 100 sample.nc 
+Wed Aug 19 17:40:44 2020	13032	findsoln -eqb -Nn 100 -T 100 sample.nc 
+Wed Aug 19 17:51:07 2020	13786	findsoln -eqb -Nn 100 -T 0.1 sample.nc 
+Wed Aug 19 17:53:01 2020	13886	findsoln -eqb -Nn 100 -T 1 sample.nc 
+Wed Aug 19 18:27:02 2020	16845	findsoln -eqb -solver bicgstab sample.nc 
+Wed Aug 19 18:27:45 2020	16922	findsoln -eqb -solver bicgstab -opt linear sample.nc 
+Wed Aug 19 18:32:11 2020	17314	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Wed Aug 19 18:32:35 2020	17383	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Wed Aug 19 18:32:48 2020	17435	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Wed Aug 19 18:33:11 2020	17509	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Wed Aug 19 18:37:35 2020	17890	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Wed Aug 19 18:46:07 2020	18533	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Thu Aug 20 00:41:40 2020	18882	findsoln -eqb -T 100 -solver bicgstab -opt linear -Nn 50 sample.nc 
+Thu Aug 20 00:45:26 2020	19223	findsoln -eqb -T 100 -Nn 50 sample.nc 
+Thu Aug 20 00:45:56 2020	19292	findsoln -eqb -T 100 -Nn 50 sample.nc 
+Thu Aug 20 00:48:36 2020	19466	findsoln -eqb -T 100 -es 1e-3 -Nn 50 sample.nc 
+Thu Aug 20 00:48:52 2020	19529	findsoln -eqb -T 100 -es 1e-5 -Nn 50 sample.nc 
+Thu Aug 20 00:50:25 2020	19675	findsoln -eqb -T 100 -es 1e-3 -Nn 50 sample.nc 

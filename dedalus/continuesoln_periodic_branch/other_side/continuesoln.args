@@ -1,0 +1,1 @@
+Thu Aug 27 17:15:39 2020	26200	continuesoln --continuation P -al -eqb -es 1e-11 -T 100 -dmu -0.001 -np0 4 -np1 4 sample.nc 

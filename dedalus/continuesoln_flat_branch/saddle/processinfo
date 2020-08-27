@@ -1,0 +1,9 @@
+Command:  continuesoln --continuation P -al -Nn 100 -T 40 --dmu -0.001 -es 1e-10 -eqb sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/continuesoln_flat_branch/saddle
+Host:     savya-X510UNR, PID: 11213
+Time:     2020-08-27 03:10:08
+Version:  2.0.2
+Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Compiler: GNU 7.5.0
+
+

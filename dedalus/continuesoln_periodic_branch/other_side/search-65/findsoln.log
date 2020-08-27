@@ -1,0 +1,146 @@
+f(u, N, dt, f_u, flags, dt) : f(u, N, dt, f_u, flags, dt) : Computing G(x)
+f(u, N, dt, f_u, flags, dt) : 
+========================================================
+Newton iteration number 0
+Current state of Newton iteration:
+   fcount_newton   == 1
+   fcount_optimiza == 0
+   L2Norm(x)       == 0.00444746
+   L2Norm(dxN)     == 0
+   L2Norm(dxOpt)   == 0
+   L2Dist(x,x0)    == 0
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.2087e-05
+   previous gx == 1.2087e-05
+   current  gx == 1.2087e-05
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 7.30472e-11
+   previous rx == 7.30472e-11
+   current  rx == 7.30472e-11
+         delta == 0.01
+Newt,GMRES == 0,0, f(u, N, dt, f_u, flags, dt) :  res == 0.991814
+Newt,GMRES == 0,1, f(u, N, dt, f_u, flags, dt) :  res == 0.818694
+Newt,GMRES == 0,2, f(u, N, dt, f_u, flags, dt) :  res == 1.04778e-05
+GMRES converged. Breaking.
+Hookstep optimization is currently not implemented with Arclength Continuation.
+Optimized Newton algorithm with AC: Computing residual to check convergence...f(u, N, dt, f_u, flags, dt) : : gx = 3.07897e-06 < 1.2087e-05
+The residual is decreasing if we take this AC-Newton step.
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 3.07897e-06
+rx           == 4.74002e-12
+L2Norm(dxN)  == 0.00231455
+L2Norm(dxOpt)== 0.00231455
+========================================================
+Newton iteration number 1
+Current state of Newton iteration:
+   fcount_newton   == 4
+   fcount_optimiza == 1
+   L2Norm(x)       == 0.00213615
+   L2Norm(dxN)     == 0.00231455
+   L2Norm(dxOpt)   == 0.00231455
+   L2Dist(x,x0)    == 0.00231455
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.2087e-05
+   previous gx == 1.2087e-05
+   current  gx == 3.07897e-06
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 7.30472e-11
+   previous rx == 7.30472e-11
+   current  rx == 4.74002e-12
+         delta == 0.01
+Newt,GMRES == 1,0, f(u, N, dt, f_u, flags, dt) :  res == 0.981701
+Newt,GMRES == 1,1, f(u, N, dt, f_u, flags, dt) :  res == 0.788355
+Newt,GMRES == 1,2, f(u, N, dt, f_u, flags, dt) :  res == 3.33374e-10
+GMRES converged. Breaking.
+Hookstep optimization is currently not implemented with Arclength Continuation.
+Optimized Newton algorithm with AC: Computing residual to check convergence...f(u, N, dt, f_u, flags, dt) : : gx = 9.76172e-07 < 3.07897e-06
+The residual is decreasing if we take this AC-Newton step.
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 9.76172e-07
+rx           == 4.76456e-13
+L2Norm(dxN)  == 0.00159485
+L2Norm(dxOpt)== 0.00159485
+========================================================
+Newton iteration number 2
+Current state of Newton iteration:
+   fcount_newton   == 7
+   fcount_optimiza == 2
+   L2Norm(x)       == 0.000545317
+   L2Norm(dxN)     == 0.00159485
+   L2Norm(dxOpt)   == 0.00159485
+   L2Dist(x,x0)    == 0.00390346
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.2087e-05
+   previous gx == 3.07897e-06
+   current  gx == 9.76172e-07
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 7.30472e-11
+   previous rx == 4.74002e-12
+   current  rx == 4.76456e-13
+         delta == 0.01
+Newt,GMRES == 2,0, f(u, N, dt, f_u, flags, dt) :  res == 0.545645
+Newt,GMRES == 2,1, f(u, N, dt, f_u, flags, dt) :  res == 0.487904
+Newt,GMRES == 2,2, f(u, N, dt, f_u, flags, dt) :  res == 6.16086e-12
+GMRES converged. Breaking.
+Hookstep optimization is currently not implemented with Arclength Continuation.
+Optimized Newton algorithm with AC: Computing residual to check convergence...f(u, N, dt, f_u, flags, dt) : : gx = 9.31538e-08 < 9.76172e-07
+The residual is decreasing if we take this AC-Newton step.
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 9.31538e-08
+rx           == 4.33882e-15
+L2Norm(dxN)  == 0.000544701
+L2Norm(dxOpt)== 0.000544701
+========================================================
+Newton iteration number 3
+Current state of Newton iteration:
+   fcount_newton   == 10
+   fcount_optimiza == 3
+   L2Norm(x)       == 9.35773e-06
+   L2Norm(dxN)     == 0.000544701
+   L2Norm(dxOpt)   == 0.000544701
+   L2Dist(x,x0)    == 0.00444738
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.2087e-05
+   previous gx == 9.76172e-07
+   current  gx == 9.31538e-08
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 7.30472e-11
+   previous rx == 4.76456e-13
+   current  rx == 4.33882e-15
+         delta == 0.01
+Newt,GMRES == 3,0, f(u, N, dt, f_u, flags, dt) :  res == 0.0158631
+Newt,GMRES == 3,1, f(u, N, dt, f_u, flags, dt) :  res == 0.00613487
+Newt,GMRES == 3,2, f(u, N, dt, f_u, flags, dt) :  res == 1.53476e-12
+GMRES converged. Breaking.
+Hookstep optimization is currently not implemented with Arclength Continuation.
+Optimized Newton algorithm with AC: Computing residual to check convergence...f(u, N, dt, f_u, flags, dt) : : gx = 2.05402e-12 < 9.31538e-08
+The residual is decreasing if we take this AC-Newton step.
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 2.05402e-12
+rx           == 2.10949e-24
+L2Norm(dxN)  == 9.35789e-06
+L2Norm(dxOpt)== 9.35789e-06
+========================================================
+Newton iteration number 4
+Current state of Newton iteration:
+   fcount_newton   == 13
+   fcount_optimiza == 4
+   L2Norm(x)       == 2.54027e-09
+   L2Norm(dxN)     == 9.35789e-06
+   L2Norm(dxOpt)   == 9.35789e-06
+   L2Dist(x,x0)    == 0.00444746
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.2087e-05
+   previous gx == 9.31538e-08
+   current  gx == 2.05402e-12
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 7.30472e-11
+   previous rx == 4.33882e-15
+   current  rx == 2.10949e-24
+         delta == 0.01
+Newton search converged. Breaking.
+L2Norm(G(x)) == 2.05402e-12 < epsSearch == 1e-11

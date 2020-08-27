@@ -27,11 +27,11 @@ class DedalusPy:
 
     def domain_setup(self):
         # Parameters
-        Lx, Ly, Lz = (25., 25., 1.)
+        Lx, Ly, Lz = (1., 1., 1.)
         self.Nd = 3
-        self.Nx = 8
-        self.Ny = 4
-        self.Nz = 8
+        self.Nx = 50
+        self.Ny = 10
+        self.Nz = 10
         self.scale = 1
         epsilon = 0.8
         self.Pr = 1.0
@@ -119,15 +119,15 @@ class DedalusPy:
         dt = self.CFL.compute_dt()
         init_time = self.solver.sim_time
         if u_init is not None:
-            print("Reading input array in Python \n \n Array length: "+str(len(u_init))+"\n")
             if len(u_init) == self.Nx*self.Ny*self.Nz*self.scale*self.Nd: 
+                print("Reading input array in Python \n \n Array length: "+str(len(u_init))+"\n")
                 for i, nx, ny, nz in itertools.product(range(self.Nd),range(self.Nx),range(self.Ny),range(self.Nz)):
                     if i == 0: self.u[nx,ny,nz] = u_init[i*(self.Ny+self.Nx+self.Nz)+ny*(self.Nx+self.Nz)+nx*self.Nz+nz]
                     elif i == 1: self.v[nx,ny,nz] = u_init[i*(self.Ny+self.Nx+self.Nz)+ny*(self.Nx+self.Nz)+nx*self.Nz+nz]
                     elif i == 2: self.w[nx,ny,nz] = u_init[i*(self.Ny+self.Nx+self.Nz)+ny*(self.Nx+self.Nz)+nx*self.Nz+nz]
         
         while init_time + T > self.solver.sim_time:
-            print(self.solver.sim_time)
+            # print(self.solver.sim_time)
             self.solver.step(dt)
         # print("Length of output array in python is:"+str(len(self.u['g']))+"\n 2-Norm of the array is:"+str(np.linalg.norm(self.u['g'],2))+"\n")
         return(np.stack((self.solver.state['u']['g'],self.solver.state['v']['g'],self.solver.state['w']['g']),axis=3))

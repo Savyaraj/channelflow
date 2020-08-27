@@ -1,0 +1,9 @@
+Command:  findsoln -eqb -T 100 -es 1e-4 -Nn 50 sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/findsoln_periodic_brach
+Host:     savya-X510UNR, PID: 26444
+Time:     2020-08-20 01:17:10
+Version:  2.0.2
+Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Compiler: GNU 7.5.0
+
+

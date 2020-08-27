@@ -3,10 +3,16 @@
  * License is GNU GPL version 2 or later: ./LICENCE
  */
 
+#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+
 #include <channelflow/laurettedsi.h>
+#include<channelflow/dedalusdsi.h> 
 #include "channelflow/cfdsi.h"
 #include "channelflow/flowfield.h"
 #include "nsolver/nsolver.h"
+#include <Python.h>
+#include "numpy/arrayobject.h"
+#include "numpy/numpyconfig.h"
 
 using namespace std;
 using namespace Eigen;
@@ -62,6 +68,9 @@ int main(int argc, char* argv[]) {
 
         FlowField u(uname, cfmpi);
 
+        // PyObject* de_init = init_dedalus();
+        // advance_dedalus(u, 100.0, de_init);
+
         FieldSymmetry sigma;
         if (sigmastr.length() != 0)
             sigma = FieldSymmetry(sigmastr);
@@ -69,8 +78,12 @@ int main(int argc, char* argv[]) {
         /** Construct the dynamical-systems interface object depending on the given parameters. Current options are
          * either standard (f(u) via forward time integration) or Laurette (f(u) via Laurettes method)
          */
-        unique_ptr<cfDSI> dsi;
-        dsi = unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma, 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize, unormalize,
+        // unique_ptr<cfDSI> dsi;
+        // dsi = unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma, 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize, unormalize,
+        //                                   u, N->getLogstream()));
+
+        unique_ptr<dedalusDSI> dsi;
+        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(dnsflags, sigma, 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize, unormalize,
                                           u, N->getLogstream()));
 
         VectorXd x_singleShot;
@@ -108,7 +121,11 @@ int main(int argc, char* argv[]) {
         cout << Nunk_total << " unknowns" << endl;
 
         Real residual = 0;
-        N->solve(*dsi, x, residual);
+        VectorXd x_out;
+        FlowField u_out = u;
+        x_out = N->solve(*dsi, x, residual);
+        vector2field(x_out, u_out);
+        dsi->save_array(u_out);
     }
 
     cfMPI_Finalize();

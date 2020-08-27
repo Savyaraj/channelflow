@@ -1,0 +1,4 @@
+Thu Aug 20 15:18:05 2020	14246	continuesoln --continuation P -al -eqb -T 100 -Nn 50 -es 1e-5 ubest.nc 
+Thu Aug 20 15:26:05 2020	15495	continuesoln --continuation P -eqb -T 100 -Nn 50 -es 1e-8 ubest.nc 
+Thu Aug 20 18:03:03 2020	25657	continuesoln --continuation P -dmu -0.001 -eqb -T 100 -Nn 50 -es 1e-8 ubest.nc 
+Thu Aug 20 18:16:28 2020	26178	continuesoln --continuation P -dmu -0.001 -eqb -T 100 -Nn 50 -es 1e-5 ubest.nc 
