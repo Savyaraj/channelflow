@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
         const Real EPSILON = 1e-13;
 
         DNSFlags dnsflags(args, searchflags.laurette);
-        dnsflags.dPdx = 0.01;
+        dnsflags.dPdx = -0.002;
         TimeStep dt(dnsflags);
         dnsflags.save();
 

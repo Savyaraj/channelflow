@@ -21,14 +21,14 @@ class DedalusPy:
     
     def __init__(self):
         self.domain_setup()
-        self.problem_setup(0.04)
+        self.problem_setup(-0.002)
         self.build_solver()
         self.init_problem()
         print("-----------dedalus problem setup complete--------------\n")
 
     def domain_setup(self):
         # Bases and domain
-        self.Nx = 100
+        self.Nx = 500
         self.Lc = 2*np.pi/0.5   # (2*pi/qc)
         self.Lx = 20*self.Lc
         self.Ny = 4
@@ -53,9 +53,9 @@ class DedalusPy:
 
     def build_solver(self):
         # Build solver
-        self.solver = self.problem.build_solver(de.timesteppers.SBDF2)
+        self.solver = self.problem.build_solver(de.timesteppers.RK443)
         self.solver.stop_wall_time = np.inf
-        self.solver.stop_iteration = 30000
+        self.solver.stop_iteration = 5000
 
     def init_problem(self):
         # Initial conditions
@@ -68,9 +68,9 @@ class DedalusPy:
         r = self.problem.parameters['r']
         qc = self.problem.parameters['qc']
         gamma3 = 8.356
-        self.u['g'] = 0.1*np.ones(len(self.u['g']))
-        # self.u['g'] = 1*np.cos(2*np.pi*self.x/self.Lc) #0.1*np.random.rand(len(self.u['g'])) #.random.rand(self.Nx) #0.1*np.sin(2*self.x)  #
-        # self.u['g'] = 2*math.sqrt(-2*r/gamma3)*(1/np.cosh((self.x-self.Lx/2)*math.sqrt(-r)/(2*qc)))*np.cos(qc*(self.x-self.Lx/2))
+        # self.u['g'] = 0.1*np.ones(len(self.u['g']))
+        # self.u['g'] = 1*np.cos(2*np.pi*(self.x-self.Lx/2)/self.Lc) #0.1*np.random.rand(len(self.u['g'])) #.random.rand(self.Nx) #0.1*np.sin(2*self.x)  #
+        self.u['g'] = 2*math.sqrt(-2*r/gamma3)*(1/np.cosh((self.x-self.Lx/2)*math.sqrt(-r)/(2*qc)))*(0.15 + np.cos(qc*(self.x-self.Lx/2)))
         self.u.differentiate(0, out=self.ux)
         self.ux.differentiate(0, out=self.uxx)
 
@@ -154,7 +154,7 @@ if __name__=="__main__":
     ux_array = np.array(sh.ux_list)
     print(str(math.sqrt(2)*np.linalg.norm(u_array[-1],2))+'\n')
     print(u_array[-1])
-    print(np.linalg.norm(u_array[0]-u_array[1],1)/dt/20)
+    print(np.linalg.norm(u_array[-1]-u_array[0],1)/1000)
     t_array = np.array(sh.t_list)
     xmesh, ymesh = quad_mesh(x=sh.x, y=t_array)
     plt.figure()

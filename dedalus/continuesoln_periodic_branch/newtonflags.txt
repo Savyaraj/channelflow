@@ -3,7 +3,7 @@ hookstep                  %optimization
 eqb                       %orbit
 0                         %xrelative
 0                         %zrelative
-1e-08                     %epsSearch
+1e-13                     %epsSearch
 1e-14                     %epsKrylov
 1e-07                     %epsDx
 1e-05                     %epsDt

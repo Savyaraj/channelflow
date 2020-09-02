@@ -10,6 +10,7 @@
 #include <Eigen/Dense>
 #include "channelflow/diffops.h"
 
+#include <fstream>
 #include <Python.h>
 #include "numpy/arrayobject.h"
 #include "numpy/numpyconfig.h"
@@ -87,17 +88,26 @@ int main(int argc, char* argv[]) {
         Real gamma3 = 8.356;
         Real r = -0.002;
 
-        FlowField u(100, 4, 4, 3, Lx, 1, 0, 1, cfmpi);
+        FlowField u(500, 4, 4, 3, Lx, 1, 0, 1, cfmpi);
         int Nx = u.Nx(), Ny = u.Ny(), Nz = u.Nz(), Nd = u.Nd();
-        // Vector ex = u.xgridpts();
+        
+        Real u_init[Nx];
+        ifstream file("u_init.txt");
+        if(file.is_open()){
+            for (int i=0; i<Nx; ++i){
+                file>>u_init[i];
+            }
+        }
+
         u.makePhysical();
         for (int i=0; i<Nd; ++i){
             for (int ny=0; ny<Ny; ++ny){
                 for (int nx=0; nx<Nx; ++nx){
                     for (int nz=0; nz<Nz; ++nz){
-                        Real x = nx*Lx/Nx;
-                        if (i==2 && ny==2){u(nx, ny, nz, i) =  0.1 + 0.2*cos(2*pi*x/Lc);}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
-                        // if (i==2 && ny==2){u(nx, ny, nz, i) = 2*sqrt(-2*r/gamma3)*(1/cosh(x*sqrt(-r)/(2*qc)))*cos(qc*x);}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
+                        Real x = nx*Lx/Nx - Lx/2;
+                        // if (i==2 && ny==2){u(nx, ny, nz, i) =  0.1 + 0.2*cos(2*pi*x/Lc);}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
+                        if (i==2 && ny==2){u(nx, ny, nz, i) = 2*sqrt(-2*r/gamma3)*(1/cosh(x*sqrt(-r)/(2*qc)))*(0.15+cos(qc*x))+0.005*(float)rand()/RAND_MAX;}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
+                        // if (i==2 && ny==2){u(nx, ny, nz, i) = u_init[nx];}
                         // if (i==2 && ny==2){u(nx, ny, nz, i) = 0.34473189;}// + 0.01*(float)rand()/RAND_MAX;}
                         else{u(nx, ny, nz, i) = 0.0;}
                         if(i==2 && ny==2 && nz==0){cout<<u(nx,ny,nz,i)<<endl;} 
@@ -202,26 +212,26 @@ int main(int argc, char* argv[]) {
         // VectorXd z = dsi->eval(y);
         // cout<<"Output vector size is: "<<y.size()<<endl;
 
-    //     u1.makeSpectral();
-    //     FlowField u2(100, 10, 10, 3, 1, 1, 0, 1, cfmpi);
-    //     VectorXd x;
-    //     field2vector(u1, x);
-    //     vector2field(x, u2);
-    //     u1.makePhysical();
-    //     u2.makePhysical();
-    //     int Nx = u1.Nx(), Ny = u1.Ny(), Nz = u1.Nz(), Nd = u1.Nd();
-    //     for (int i=0; i<Nd; ++i){
-    //         for (int ny=0; ny<Ny; ++ny){
-    //             for (int nx=0; nx<Nx; ++nx){
-    //                 for (int nz=0; nz<Nz; ++nz){
-    //                     if((u1(nx,ny,nz,i) - u2(nx,ny,nz,i))*(u1(nx,ny,nz,i) - u2(nx,ny,nz,i))>1e-20){
-    //                         cout<<u1(nx,ny,nz,i)<<'\t'<<u2(nx,ny,nz,i)<<endl;
-    //                     }
-    //                     if(u2(nx,ny,nz,i)>1e-10){cout<<u2(nx,ny,nz,i)<<endl;}
-    //                 }
-    //             }
-    //         }
-    //     }
+        // u1.makeSpectral();
+        // FlowField u2(1000, 4, 4, 3, Lx, 1, 0, 1, cfmpi);
+        // VectorXd x;
+        // field2vector(u1, x);
+        // vector2field(x, u2);
+        // u1.makePhysical();
+        // u2.makePhysical();
+        // // int Nx = u1.Nx(), Ny = u1.Ny(), Nz = u1.Nz(), Nd = u1.Nd();
+        // for (int i=0; i<Nd; ++i){
+        //     for (int ny=0; ny<Ny; ++ny){
+        //         for (int nx=0; nx<Nx; ++nx){
+        //             for (int nz=0; nz<Nz; ++nz){
+        //                 if((u1(nx,ny,nz,i) - u2(nx,ny,nz,i))*(u1(nx,ny,nz,i) - u2(nx,ny,nz,i))>1e-10){
+        //                     cout<<u1(nx,ny,nz,i)<<'\t'<<u2(nx,ny,nz,i)<<endl;
+        //                 }
+        //                 // if(u2(nx,ny,nz,i)>1e-10){cout<<u2(nx,ny,nz,i)<<endl;}
+        //             }
+        //         }
+        //     }
+        // }
         
     }
 }

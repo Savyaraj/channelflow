@@ -1,9 +1,9 @@
 Command:  ./a.out -eqb sample.nc 
 PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus
-Host:     savya-X510UNR, PID: 21502
-Time:     2020-08-27 04:35:25
+Host:     savya-X510UNR, PID: 10286
+Time:     2020-09-02 03:32:56
 Version:  2.0.2
-Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Git rev:  86dc0f34d91b1161c4b4688eb658230d80e8ef61
 Compiler: GNU 7.5.0
 
 

@@ -9,11 +9,12 @@ import matplotlib.pyplot as plt
 
 def plot_array():
     arr = np.load("./flowfield.npy")
-    plt.plot(np.linspace(0,2*2*np.pi/1.25,len(arr)), arr, 'k-')
+    plt.plot(np.linspace(-40*np.pi,40*np.pi,len(arr)), arr, 'k-')
     plt.xlabel("$x/L_c$",fontsize=15)
     plt.ylabel("$u(x)$",fontsize=15)
-    plt.title("Solution Profile, $r=-0.01$",fontsize=15)
-    plt.savefig("periodic_soln_0.01.png")
+    plt.title("Solution Profile, $r=-0.002$",fontsize=15)
+    plt.savefig("localized_solution.png")
+    plt.savefig("localized_solution.pdf")
     plt.show()
 
 def plot_bifurcation(filename):
@@ -21,14 +22,14 @@ def plot_bifurcation(filename):
     print(file.shape)
     N_arr = file[:,1]
     mu_arr = file[:,0]
-    plt.plot(mu_arr, N_arr*0.25/0.147, 'k-')
+    plt.plot(mu_arr, N_arr, 'k-')
     plt.xlabel("$r$",fontsize=15)
     plt.ylabel("$||u||_2$",fontsize=15)
-    plt.title("Bifurcation diagram - periodic branch",fontsize=15)
-    file = np.genfromtxt('./MuE_other_side.asc',dtype=float)
-    N_arr = file[1:57,1]
-    mu_arr = file[1:57,0]
-    plt.plot(mu_arr, N_arr*0.25/0.147, 'k-')
+    plt.title("Bifurcation diagram - snaking",fontsize=15)
+    # file = np.genfromtxt('./MuE_other_side.asc',dtype=float)
+    # N_arr = file[1:57,1]
+    # mu_arr = file[1:57,0]
+    # plt.plot(mu_arr, N_arr*0.56/0.34, 'k-')
     plt.savefig("bifurcation.png")
     plt.show()
 

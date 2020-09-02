@@ -1,9 +1,9 @@
-Command:  continuesoln --continuation P -dmu -0.001 -eqb -T 100 -Nn 50 -es 1e-5 ubest.nc 
+Command:  continuesoln --continuation P -al -T 100 -es 1e-6 -eg 0.1 -eqb -dmu -0.001 -np0 4 -np1 4 ubest.nc 
 PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/continuesoln_localized_branch
-Host:     savya-X510UNR, PID: 26178
-Time:     2020-08-20 06:16:28
+Host:     savya-X510UNR, PID: 18507
+Time:     2020-09-02 04:43:21
 Version:  2.0.2
-Git rev:  6b87033cfc751a115bfe099231d9a6f1f24ed7c5
+Git rev:  86dc0f34d91b1161c4b4688eb658230d80e8ef61
 Compiler: GNU 7.5.0
 
 

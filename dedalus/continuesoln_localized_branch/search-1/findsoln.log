@@ -5,18 +5,18 @@ Newton iteration number 0
 Current state of Newton iteration:
    fcount_newton   == 1
    fcount_optimiza == 0
-   L2Norm(x)       == 0.00322304
+   L2Norm(x)       == 0.00526191
    L2Norm(dxN)     == 0
    L2Norm(dxOpt)   == 0
    L2Dist(x,x0)    == 0
 gx == L2Norm(G(x)) : 
-   initial  gx == 6.23047e-06
-   previous gx == 6.23047e-06
-   current  gx == 6.23047e-06
+   initial  gx == 7.26884e-07
+   previous gx == 7.26884e-07
+   current  gx == 7.26884e-07
 rx == 1/2 L2Norm2(G(x)) : 
-   initial  rx == 1.94094e-11
-   previous rx == 1.94094e-11
-   current  rx == 1.94094e-11
+   initial  rx == 2.6418e-13
+   previous rx == 2.6418e-13
+   current  rx == 2.6418e-13
          delta == 0.01
 Newton search converged. Breaking.
-L2Norm(G(x)) == 6.23047e-06 < epsSearch == 1e-05
+L2Norm(G(x)) == 7.26884e-07 < epsSearch == 1e-06
