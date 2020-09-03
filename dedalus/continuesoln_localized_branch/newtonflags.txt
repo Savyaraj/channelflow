@@ -3,7 +3,7 @@ hookstep                  %optimization
 eqb                       %orbit
 0                         %xrelative
 0                         %zrelative
-1e-06                     %epsSearch
+9.999999999999999e-12     %epsSearch
 1e-14                     %epsKrylov
 1e-07                     %epsDx
 1e-05                     %epsDt
@@ -12,7 +12,7 @@ eqb                       %orbit
 2                         %lBiCGStab
 10                        %gRatio
 0                         %centdiff
-20                        %Nnewton
+100                       %Nnewton
 500                       %Nsolver
 20                        %Nhook
 1                         %Nshot

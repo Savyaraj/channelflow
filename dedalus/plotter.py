@@ -25,7 +25,7 @@ def plot_bifurcation(filename):
     plt.plot(mu_arr, N_arr, 'k-')
     plt.xlabel("$r$",fontsize=15)
     plt.ylabel("$||u||_2$",fontsize=15)
-    plt.title("Bifurcation diagram - snaking",fontsize=15)
+    plt.title("Bifurcation diagram - localized solutions",fontsize=15)
     # file = np.genfromtxt('./MuE_other_side.asc',dtype=float)
     # N_arr = file[1:57,1]
     # mu_arr = file[1:57,0]

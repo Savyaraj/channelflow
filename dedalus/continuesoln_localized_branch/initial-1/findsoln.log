@@ -5,23 +5,21 @@ Newton iteration number 0
 Current state of Newton iteration:
    fcount_newton   == 1
    fcount_optimiza == 0
-   L2Norm(x)       == 0.00451101
+   L2Norm(x)       == 0.00832737
    L2Norm(dxN)     == 0
    L2Norm(dxOpt)   == 0
    L2Dist(x,x0)    == 0
 gx == L2Norm(G(x)) : 
-   initial  gx == 4.13751e-06
-   previous gx == 4.13751e-06
-   current  gx == 4.13751e-06
+   initial  gx == 3.03949e-06
+   previous gx == 3.03949e-06
+   current  gx == 3.03949e-06
 rx == 1/2 L2Norm2(G(x)) : 
-   initial  rx == 8.55948e-12
-   previous rx == 8.55948e-12
-   current  rx == 8.55948e-12
+   initial  rx == 4.61924e-12
+   previous rx == 4.61924e-12
+   current  rx == 4.61924e-12
          delta == 0.01
-Newt,GMRES == 0,0, f(u, N, dt, f_u, flags, dt) :  res == 0.360211
-Newt,GMRES == 0,1, f(u, N, dt, f_u, flags, dt) :  res == 0.330417
-Newt,GMRES == 0,2, f(u, N, dt, f_u, flags, dt) :  res == 0.147198
-Newt,GMRES == 0,3, f(u, N, dt, f_u, flags, dt) :  res == 0.0630041
+Newt,GMRES == 0,0, f(u, N, dt, f_u, flags, dt) :  res == 0.10791
+Newt,GMRES == 0,1, f(u, N, dt, f_u, flags, dt) :  res == 0.0213387
 GMRES converged. Breaking.
 ------------------------------------------------
 Beginning hookstep calculations.
@@ -29,27 +27,27 @@ Beginning hookstep calculations.
 Hookstep number 0
 delta == 0.01
 Newton step is within trust region: 
-L2Norm(dxN) == 0.000593237 <= 0.01 == delta
+L2Norm(dxN) == 0.000117439 <= 0.01 == delta
 Computing residual of hookstep dxH
-L2Norm(dxH) == 0.000593237
+L2Norm(dxH) == 0.000117439
 f(u, N, dt, f_u, flags, dt) : 
-r(x), r(x+dxH) == 8.55948e-12, 3.86409e-13
+r(x), r(x+dxH) == 4.61924e-12, 5.12111e-13
 Computing local quadratic model of residual
 f(u, N, dt, f_u, flags, dt) : 
 Determining what to do with current Newton/hookstep and trust region
-rx       ==   8.55948e-12 residual at current position
-rH       ==   3.86409e-13 residual of newton/hookstep
-Delta_rH ==  -8.17308e-12 actual improvement in residual from newton/hookstep
+rx       ==   4.61924e-12 residual at current position
+rH       ==   5.12111e-13 residual of newton/hookstep
+Delta_rH ==  -4.10712e-12 actual improvement in residual from newton/hookstep
 
-             -1.80066e-14 lower bound for acceptable improvement
-             -8.29102e-13 upper bound for ok improvement.
-             -6.21827e-12 upper bound for good improvement.
-             -7.46192e-12 upper bound for accurate prediction.
-Delta_rH ==  -8.17308e-12 ------> Accurate <------
-             -9.12013e-12 lower bound for accurate prediction.
-             -1.80066e-11 local linear model of improvement
-lambda       == 0.915574 is the reduction/increase factor for delta suggested by quadratic model
-lambda*delta == 0.00915574 is the delta suggested by quadratic model
+             -6.00594e-15 lower bound for acceptable improvement
+             -4.04929e-13 upper bound for ok improvement.
+             -3.03697e-12 upper bound for good improvement.
+             -3.64436e-12 upper bound for accurate prediction.
+Delta_rH ==  -4.10712e-12 ------> Accurate <------
+             -4.45422e-12 lower bound for accurate prediction.
+             -6.00594e-12 local linear model of improvement
+lambda       == 1.58149 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.0158149 is the delta suggested by quadratic model
 Improvement is Accurate (some form of acceptable).
 Stop adjusting trust region and take a step because
 Improvement is merely Poor, Ok, or Good : 0
@@ -63,27 +61,290 @@ delta >= deltaMax      : false
 delta == 0.01
 
 Taking best step and continuing Newton iteration.
-L2Norm(G(x)) == 8.79101e-07
-rx           == 3.86409e-13
-L2Norm(dxN)  == 0.000593237
-L2Norm(dxOpt)== 0.000593237
+L2Norm(G(x)) == 1.01204e-06
+rx           == 5.12111e-13
+L2Norm(dxN)  == 0.000117439
+L2Norm(dxOpt)== 0.000117439
 ========================================================
 Newton iteration number 1
 Current state of Newton iteration:
-   fcount_newton   == 5
+   fcount_newton   == 3
    fcount_optimiza == 2
-   L2Norm(x)       == 0.00458891
-   L2Norm(dxN)     == 0.000593237
-   L2Norm(dxOpt)   == 0.000593237
-   L2Dist(x,x0)    == 0.000593237
+   L2Norm(x)       == 0.00821837
+   L2Norm(dxN)     == 0.000117439
+   L2Norm(dxOpt)   == 0.000117439
+   L2Dist(x,x0)    == 0.000117439
 gx == L2Norm(G(x)) : 
-   initial  gx == 4.13751e-06
-   previous gx == 4.13751e-06
-   current  gx == 8.79101e-07
+   initial  gx == 3.03949e-06
+   previous gx == 3.03949e-06
+   current  gx == 1.01204e-06
 rx == 1/2 L2Norm2(G(x)) : 
-   initial  rx == 8.55948e-12
-   previous rx == 8.55948e-12
-   current  rx == 3.86409e-13
+   initial  rx == 4.61924e-12
+   previous rx == 4.61924e-12
+   current  rx == 5.12111e-13
+         delta == 0.01
+Newt,GMRES == 1,0, f(u, N, dt, f_u, flags, dt) :  res == 0.134314
+Newt,GMRES == 1,1, f(u, N, dt, f_u, flags, dt) :  res == 0.0289317
+GMRES converged. Breaking.
+------------------------------------------------
+Beginning hookstep calculations.
+-------------------------------------------
+Hookstep number 0
+delta == 0.01
+Newton step is within trust region: 
+L2Norm(dxN) == 5.55454e-05 <= 0.01 == delta
+Computing residual of hookstep dxH
+L2Norm(dxH) == 5.55454e-05
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 5.12111e-13, 5.18715e-16
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   5.12111e-13 residual at current position
+rH       ==   5.18715e-16 residual of newton/hookstep
+Delta_rH ==  -5.11592e-13 actual improvement in residual from newton/hookstep
+
+             -1.02538e-15 lower bound for acceptable improvement
+             -5.11679e-14 upper bound for ok improvement.
+              -3.8376e-13 upper bound for good improvement.
+             -4.60512e-13 upper bound for accurate prediction.
+Delta_rH ==  -5.11592e-13 ------> Accurate <------
+             -5.62847e-13 lower bound for accurate prediction.
+             -1.02538e-12 local linear model of improvement
+lambda       == 0.99786 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.0099786 is the delta suggested by quadratic model
+Improvement is Accurate (some form of acceptable).
+Stop adjusting trust region and take a step because
+Improvement is merely Poor, Ok, or Good : 0
+Newton step is within trust region      : 1
+Backup step is better                   : 0
+Delta has reached local limit           : 0
+Take current step and leave delta unchanged, for the following reasons:
+improvement            : Accurate
+|newtonstep| <= delta  : true
+delta >= deltaMax      : false
+delta == 0.01
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 3.22091e-08
+rx           == 5.18715e-16
+L2Norm(dxN)  == 5.55454e-05
+L2Norm(dxOpt)== 5.55454e-05
+========================================================
+Newton iteration number 2
+Current state of Newton iteration:
+   fcount_newton   == 5
+   fcount_optimiza == 4
+   L2Norm(x)       == 0.00816715
+   L2Norm(dxN)     == 5.55454e-05
+   L2Norm(dxOpt)   == 5.55454e-05
+   L2Dist(x,x0)    == 0.000171478
+gx == L2Norm(G(x)) : 
+   initial  gx == 3.03949e-06
+   previous gx == 1.01204e-06
+   current  gx == 3.22091e-08
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 4.61924e-12
+   previous rx == 5.12111e-13
+   current  rx == 5.18715e-16
+         delta == 0.01
+Newt,GMRES == 2,0, f(u, N, dt, f_u, flags, dt) :  res == 0.905512
+Newt,GMRES == 2,1, f(u, N, dt, f_u, flags, dt) :  res == 0.317578
+Newt,GMRES == 2,2, f(u, N, dt, f_u, flags, dt) :  res == 0.016791
+GMRES converged. Breaking.
+------------------------------------------------
+Beginning hookstep calculations.
+-------------------------------------------
+Hookstep number 0
+delta == 0.01
+Newton step is within trust region: 
+L2Norm(dxN) == 4.1753e-06 <= 0.01 == delta
+Computing residual of hookstep dxH
+L2Norm(dxH) == 4.1753e-06
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 5.18715e-16, 1.49341e-19
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   5.18715e-16 residual at current position
+rH       ==   1.49341e-19 residual of newton/hookstep
+Delta_rH ==  -5.18565e-16 actual improvement in residual from newton/hookstep
+
+             -1.03773e-18 lower bound for acceptable improvement
+             -5.18566e-17 upper bound for ok improvement.
+             -3.88925e-16 upper bound for good improvement.
+              -4.6671e-16 upper bound for accurate prediction.
+Delta_rH ==  -5.18565e-16 ------> Accurate <------
+             -5.70423e-16 lower bound for accurate prediction.
+             -1.03773e-15 local linear model of improvement
+lambda       == 0.999422 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.00999422 is the delta suggested by quadratic model
+Improvement is Accurate (some form of acceptable).
+Stop adjusting trust region and take a step because
+Improvement is merely Poor, Ok, or Good : 0
+Newton step is within trust region      : 1
+Backup step is better                   : 0
+Delta has reached local limit           : 0
+Take current step and leave delta unchanged, for the following reasons:
+improvement            : Accurate
+|newtonstep| <= delta  : true
+delta >= deltaMax      : false
+delta == 0.01
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 5.46519e-10
+rx           == 1.49341e-19
+L2Norm(dxN)  == 4.1753e-06
+L2Norm(dxOpt)== 4.1753e-06
+========================================================
+Newton iteration number 3
+Current state of Newton iteration:
+   fcount_newton   == 8
+   fcount_optimiza == 6
+   L2Norm(x)       == 0.00816819
+   L2Norm(dxN)     == 4.1753e-06
+   L2Norm(dxOpt)   == 4.1753e-06
+   L2Dist(x,x0)    == 0.000171612
+gx == L2Norm(G(x)) : 
+   initial  gx == 3.03949e-06
+   previous gx == 3.22091e-08
+   current  gx == 5.46519e-10
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 4.61924e-12
+   previous rx == 5.18715e-16
+   current  rx == 1.49341e-19
+         delta == 0.01
+Newt,GMRES == 3,0, f(u, N, dt, f_u, flags, dt) :  res == 0.203757
+Newt,GMRES == 3,1, f(u, N, dt, f_u, flags, dt) :  res == 0.203512
+Newt,GMRES == 3,2, f(u, N, dt, f_u, flags, dt) :  res == 0.0321955
+GMRES converged. Breaking.
+------------------------------------------------
+Beginning hookstep calculations.
+-------------------------------------------
+Hookstep number 0
+delta == 0.01
+Newton step is within trust region: 
+L2Norm(dxN) == 8.30119e-08 <= 0.01 == delta
+Computing residual of hookstep dxH
+L2Norm(dxH) == 8.30119e-08
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 1.49341e-19, 1.54368e-22
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   1.49341e-19 residual at current position
+rH       ==   1.54368e-22 residual of newton/hookstep
+Delta_rH ==  -1.49187e-19 actual improvement in residual from newton/hookstep
+
+              -2.9841e-22 lower bound for acceptable improvement
+             -1.49187e-20 upper bound for ok improvement.
+              -1.1189e-19 upper bound for good improvement.
+             -1.34268e-19 upper bound for accurate prediction.
+Delta_rH ==  -1.49187e-19 ------> Accurate <------
+             -1.64106e-19 lower bound for accurate prediction.
+              -2.9841e-19 local linear model of improvement
+lambda       == 0.99988 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.0099988 is the delta suggested by quadratic model
+Improvement is Accurate (some form of acceptable).
+Stop adjusting trust region and take a step because
+Improvement is merely Poor, Ok, or Good : 0
+Newton step is within trust region      : 1
+Backup step is better                   : 0
+Delta has reached local limit           : 0
+Take current step and leave delta unchanged, for the following reasons:
+improvement            : Accurate
+|newtonstep| <= delta  : true
+delta >= deltaMax      : false
+delta == 0.01
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 1.75709e-11
+rx           == 1.54368e-22
+L2Norm(dxN)  == 8.30119e-08
+L2Norm(dxOpt)== 8.30119e-08
+========================================================
+Newton iteration number 4
+Current state of Newton iteration:
+   fcount_newton   == 11
+   fcount_optimiza == 8
+   L2Norm(x)       == 0.00816819
+   L2Norm(dxN)     == 8.30119e-08
+   L2Norm(dxOpt)   == 8.30119e-08
+   L2Dist(x,x0)    == 0.000171619
+gx == L2Norm(G(x)) : 
+   initial  gx == 3.03949e-06
+   previous gx == 5.46519e-10
+   current  gx == 1.75709e-11
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 4.61924e-12
+   previous rx == 1.49341e-19
+   current  rx == 1.54368e-22
+         delta == 0.01
+Newt,GMRES == 4,0, f(u, N, dt, f_u, flags, dt) :  res == 0.262024
+Newt,GMRES == 4,1, f(u, N, dt, f_u, flags, dt) :  res == 0.233366
+Newt,GMRES == 4,2, f(u, N, dt, f_u, flags, dt) :  res == 0.0439866
+GMRES converged. Breaking.
+------------------------------------------------
+Beginning hookstep calculations.
+-------------------------------------------
+Hookstep number 0
+delta == 0.01
+Newton step is within trust region: 
+L2Norm(dxN) == 2.19377e-09 <= 0.01 == delta
+Computing residual of hookstep dxH
+L2Norm(dxH) == 2.19377e-09
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 1.54368e-22, 3.80808e-24
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   1.54368e-22 residual at current position
+rH       ==   3.80808e-24 residual of newton/hookstep
+Delta_rH ==   -1.5056e-22 actual improvement in residual from newton/hookstep
+
+             -3.09075e-25 lower bound for acceptable improvement
+              -1.5056e-23 upper bound for ok improvement.
+              -1.1292e-22 upper bound for good improvement.
+             -1.35504e-22 upper bound for accurate prediction.
+Delta_rH ==   -1.5056e-22 ------> Accurate <------
+             -1.65616e-22 lower bound for accurate prediction.
+             -3.09075e-22 local linear model of improvement
+lambda       == 0.974908 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.00974908 is the delta suggested by quadratic model
+Improvement is Accurate (some form of acceptable).
+Stop adjusting trust region and take a step because
+Improvement is merely Poor, Ok, or Good : 0
+Newton step is within trust region      : 1
+Backup step is better                   : 0
+Delta has reached local limit           : 0
+Take current step and leave delta unchanged, for the following reasons:
+improvement            : Accurate
+|newtonstep| <= delta  : true
+delta >= deltaMax      : false
+delta == 0.01
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 2.75974e-12
+rx           == 3.80808e-24
+L2Norm(dxN)  == 2.19377e-09
+L2Norm(dxOpt)== 2.19377e-09
+========================================================
+Newton iteration number 5
+Current state of Newton iteration:
+   fcount_newton   == 14
+   fcount_optimiza == 10
+   L2Norm(x)       == 0.00816819
+   L2Norm(dxN)     == 2.19377e-09
+   L2Norm(dxOpt)   == 2.19377e-09
+   L2Dist(x,x0)    == 0.00017162
+gx == L2Norm(G(x)) : 
+   initial  gx == 3.03949e-06
+   previous gx == 1.75709e-11
+   current  gx == 2.75974e-12
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 4.61924e-12
+   previous rx == 1.54368e-22
+   current  rx == 3.80808e-24
          delta == 0.01
 Newton search converged. Breaking.
-L2Norm(G(x)) == 8.79101e-07 < epsSearch == 1e-06
+L2Norm(G(x)) == 2.75974e-12 < epsSearch == 1e-11
