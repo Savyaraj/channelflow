@@ -20,8 +20,8 @@ def plot_array():
 def plot_bifurcation(filename):
     file = np.genfromtxt(filename,dtype=float)
     print(file.shape)
-    N_arr = file[:,1]
-    mu_arr = file[:,0]
+    N_arr = file[:-1,1]
+    mu_arr = file[:-1,0]
     plt.plot(mu_arr, N_arr, 'k-')
     plt.xlabel("$r$",fontsize=15)
     plt.ylabel("$||u||_2$",fontsize=15)
