@@ -2,7 +2,7 @@
 0                         %Vsuck
 0                         %rotation
 0                         %theta
--0.009107463613318097     %dPdx
+-0.01317542955366842      %dPdx
 0                         %dPdz
 0                         %Ubulk
 0                         %Wbulk

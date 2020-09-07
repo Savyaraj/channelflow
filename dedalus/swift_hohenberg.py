@@ -28,7 +28,7 @@ class DedalusPy:
 
     def domain_setup(self):
         # Bases and domain
-        self.Nx = 500
+        self.Nx = 100
         self.Lc = 2*np.pi/0.5   # (2*pi/qc)
         self.Lx = 20*self.Lc
         self.Ny = 4
@@ -87,7 +87,7 @@ class DedalusPy:
         self.u.set_scales(1)
         if u_init is not None:
             if len(u_init) == self.Nx:
-                # print("Reading input array in Python of length: "+str(len(u_init)))
+                print("Reading input array in Python of length: "+str(len(u_init)))
                 self.u['g'][:] = u_init[:]
             # if len(u_init) == self.Nx*self.Ny*self.Nz*self.scale*self.Nd: 
             #     print("Reading input array in Python of length: "+str(len(u_init)))

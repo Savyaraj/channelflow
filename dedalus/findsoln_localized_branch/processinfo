@@ -1,9 +1,9 @@
-Command:  findsoln -eqb -T 100 -es 1e-7 -np0 4 -np1 4 sample.nc 
+Command:  findsoln -eqb -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
 PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/findsoln_localized_branch
-Host:     savya-X510UNR, PID: 11860
-Time:     2020-09-02 03:55:59
+Host:     savya-X510UNR, PID: 5556
+Time:     2020-09-04 06:17:16
 Version:  2.0.2
-Git rev:  86dc0f34d91b1161c4b4688eb658230d80e8ef61
+Git rev:  ebfbbef4f47a5876642b6ed20c66ec9006f05352
 Compiler: GNU 7.5.0
 
 

@@ -4,3 +4,17 @@ Thu Sep  3 13:18:15 2020	30284	continuesoln --continuation P -al -T 100 -eg 0.1 
 Thu Sep  3 13:33:57 2020	31242	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-11 -Nn 100 -eqb -dmu -0.0001 -dsmin 1e-8 -dsmax 0.01 -ns 500 -np0 4 -np1 4 ubest.nc 
 Thu Sep  3 14:38:10 2020	32583	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-11 -Nn 100 -eqb -dmu -0.0001 -dsmin 1e-8 -dsmax 0.001 -ns 500 -np0 4 -np1 4 ubest.nc 
 Thu Sep  3 15:19:37 2020	3224	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-11 -Nn 100 -eqb -dmu -0.0001 -dsmin 1e-8 -dsmax 0.01 -ns 500 -np0 4 -np1 4 ubest.nc 
+Thu Sep  3 18:47:21 2020	18820	continuesoln --continuation P -eqb -dmu -0.0001 -T 100 -al sample.nc 
+Fri Sep  4 18:31:01 2020	7361	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-11 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Fri Sep  4 18:31:17 2020	7463	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-11 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sat Sep  5 19:31:58 2020	26962	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-11 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sat Sep  5 20:00:13 2020	27831	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sat Sep  5 20:04:19 2020	28348	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sun Sep  6 00:10:07 2020	9223	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sun Sep  6 00:24:51 2020	11023	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.01 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sun Sep  6 01:30:41 2020	16641	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -dsmax 0.1 -ns 1000 -np0 4 -np1 4 -mui -0.002 ubest.nc 
+Sun Sep  6 14:55:42 2020	31286	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -ns 1000 -np0 4 -np1 4 -mui -0.01248 ubest.nc 
+Sun Sep  6 16:29:21 2020	32737	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -ns 1000 -np0 4 -np1 4 -mui -0.01248 ubest.nc 
+Sun Sep  6 16:30:52 2020	531	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-7 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -ns 1000 -np0 4 -np1 4 -mui -0.01248 ubest.nc 
+Sun Sep  6 16:40:38 2020	1949	continuesoln --continuation P -al -T 100 -eg 0.01 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -ns 1000 -np0 4 -np1 4 -mui -0.0124 ubest.nc 
+Sun Sep  6 16:47:19 2020	3101	continuesoln --continuation P -al -T 100 -eg 0.1 -es 1e-8 -Nn 100 -eqb -dmu -0.001 -dsmin 1e-8 -ns 1000 -np0 4 -np1 4 -mui -0.013 ubest.nc 

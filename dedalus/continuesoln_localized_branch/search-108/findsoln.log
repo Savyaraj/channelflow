@@ -1,0 +1,55 @@
+f(u, N, dt, f_u, flags, dt) : Computing G(x)
+f(u, N, dt, f_u, flags, dt) : 
+========================================================
+Newton iteration number 0
+Current state of Newton iteration:
+   fcount_newton   == 1
+   fcount_optimiza == 0
+   L2Norm(x)       == 0.0239391
+   L2Norm(dxN)     == 0
+   L2Norm(dxOpt)   == 0
+   L2Dist(x,x0)    == 0
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.70843e-07
+   previous gx == 1.70843e-07
+   current  gx == 1.70843e-07
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 1.45936e-14
+   previous rx == 1.45936e-14
+   current  rx == 1.45936e-14
+         delta == 0.01
+Newt,GMRES == 0,0, f(u, N, dt, f_u, flags, dt) :  res == 0.974913
+Newt,GMRES == 0,1, f(u, N, dt, f_u, flags, dt) :  res == 0.198675
+Newt,GMRES == 0,2, f(u, N, dt, f_u, flags, dt) :  res == 0.166392
+Newt,GMRES == 0,3, f(u, N, dt, f_u, flags, dt) :  res == 0.132273
+Newt,GMRES == 0,4, f(u, N, dt, f_u, flags, dt) :  res == 0.0532185
+GMRES converged. Breaking.
+Hookstep optimization is currently not implemented with Arclength Continuation.
+Optimized Newton algorithm with AC: Computing residual to check convergence...f(u, N, dt, f_u, flags, dt) : : gx = 9.36325e-09 < 1.70843e-07
+The residual is decreasing if we take this AC-Newton step.
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 9.36325e-09
+rx           == 4.38352e-17
+L2Norm(dxN)  == 3.08459e-05
+L2Norm(dxOpt)== 3.08459e-05
+========================================================
+Newton iteration number 1
+Current state of Newton iteration:
+   fcount_newton   == 6
+   fcount_optimiza == 1
+   L2Norm(x)       == 0.0239448
+   L2Norm(dxN)     == 3.08459e-05
+   L2Norm(dxOpt)   == 3.08459e-05
+   L2Dist(x,x0)    == 3.0846e-05
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.70843e-07
+   previous gx == 1.70843e-07
+   current  gx == 9.36325e-09
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 1.45936e-14
+   previous rx == 1.45936e-14
+   current  rx == 4.38352e-17
+         delta == 0.01
+Newton search converged. Breaking.
+L2Norm(G(x)) == 9.36325e-09 < epsSearch == 1e-08

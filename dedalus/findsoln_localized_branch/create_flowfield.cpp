@@ -88,7 +88,7 @@ int main(int argc, char* argv[]) {
         Real gamma3 = 8.356;
         Real r = -0.002;
 
-        FlowField u(500, 4, 4, 3, Lx, 1, 0, 1, cfmpi);
+        FlowField u(100, 4, 4, 3, Lx, 1, 0, 1, cfmpi);
         int Nx = u.Nx(), Ny = u.Ny(), Nz = u.Nz(), Nd = u.Nd();
         
         // Real u_init[Nx];

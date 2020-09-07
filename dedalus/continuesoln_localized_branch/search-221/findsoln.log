@@ -1,0 +1,22 @@
+f(u, N, dt, f_u, flags, dt) : f(u, N, dt, f_u, flags, dt) : Computing G(x)
+f(u, N, dt, f_u, flags, dt) : 
+========================================================
+Newton iteration number 0
+Current state of Newton iteration:
+   fcount_newton   == 1
+   fcount_optimiza == 0
+   L2Norm(x)       == 0.0152928
+   L2Norm(dxN)     == 0
+   L2Norm(dxOpt)   == 0
+   L2Dist(x,x0)    == 0
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.65001e-05
+   previous gx == 1.65001e-05
+   current  gx == 1.65001e-05
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 1.36126e-10
+   previous rx == 1.36126e-10
+   current  rx == 1.36126e-10
+         delta == 0.01
+Newt,GMRES == 0,0, f(u, N, dt, f_u, flags, dt) :  res == 0.999844
+Newt,GMRES == 0,1, f(u, N, dt, f_u, flags, dt) : 

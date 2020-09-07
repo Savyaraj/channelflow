@@ -3,3 +3,5 @@ Wed Sep  2 15:38:58 2020	10816	findsoln -eqb -T 100 -es 1e-7 -np0 4 -np1 4 sampl
 Wed Sep  2 15:47:15 2020	11158	findsoln -eqb -T 100 -es 1e-7 -np0 4 -np1 4 sample.nc 
 Wed Sep  2 15:48:23 2020	11428	findsoln -eqb -T 100 -es 1e-7 -np0 4 -np1 4 sample.nc 
 Wed Sep  2 15:55:59 2020	11860	findsoln -eqb -T 100 -es 1e-7 -np0 4 -np1 4 sample.nc 
+Fri Sep  4 18:13:05 2020	5309	findsoln -eqb -T 100 -es 1e-7 -np0 4 -np1 4 sample.nc 
+Fri Sep  4 18:17:16 2020	5556	findsoln -eqb -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 

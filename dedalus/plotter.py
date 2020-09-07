@@ -17,15 +17,17 @@ def plot_array():
     plt.savefig("localized_solution.pdf")
     plt.show()
 
-def plot_bifurcation(filename):
-    file = np.genfromtxt(filename,dtype=float)
-    print(file.shape)
-    N_arr = file[:-1,1]
-    mu_arr = file[:-1,0]
-    plt.plot(mu_arr, N_arr, 'k-')
-    plt.xlabel("$r$",fontsize=15)
-    plt.ylabel("$||u||_2$",fontsize=15)
-    plt.title("Bifurcation diagram - localized solutions",fontsize=15)
+def plot_bifurcation(filenames):
+
+    for filename in filenames:
+        file = np.genfromtxt(filename,dtype=float)
+        print(file.shape)
+        N_arr = file[:-1,1]
+        mu_arr = file[:-1,0]
+        plt.plot(mu_arr, N_arr, 'k-')
+        plt.xlabel("$r$",fontsize=15)
+        plt.ylabel("$||u||_2$",fontsize=15)
+        plt.title("Bifurcation diagram - localized solutions",fontsize=15)
     # file = np.genfromtxt('./MuE_other_side.asc',dtype=float)
     # N_arr = file[1:57,1]
     # mu_arr = file[1:57,0]
@@ -34,5 +36,6 @@ def plot_bifurcation(filename):
     plt.show()
 
 if __name__=="__main__":
-    plot_bifurcation('./MuE.asc')
+    # plot_bifurcation(['./MuE_1.asc','./MuE_2.asc'])
+    plot_bifurcation(['./MuE.asc'])
     # plot_array()
