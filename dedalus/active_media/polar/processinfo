@@ -1,7 +1,7 @@
-Command:  ./a.out -eqb -T 0.1 sample.nc 
+Command:  findsoln -eqb -T 1 sample.nc 
 PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/active_media/polar
-Host:     savya-X510UNR, PID: 9377
-Time:     2020-10-05 08:12:35
+Host:     savya-X510UNR, PID: 6107
+Time:     2020-10-06 07:29:58
 Version:  2.0.2
 Git rev:  ff4948d34b08fd077cf29525d8f59172bd2fc691
 Compiler: GNU 7.5.0

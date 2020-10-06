@@ -12,7 +12,7 @@
 0                         %wupperwall
 -0                        %wlowerwall
 0                         %t0
-0.1                       %T
+1                         %T
 1                         %dT
 0.03125                   %dt
 1                         %variabledt
