@@ -1,0 +1,235 @@
+Wed Sep 30 14:16:46 2020	29688	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:17:06 2020	29814	findsoln -eqb -T 1 -es 1e-8 -sigma symmetries sample.nc 
+Wed Sep 30 14:17:17 2020	29876	findsoln -eqb -xrel -zrel -T 1 -es 1e-8 -sigma symmetries sample.nc 
+Wed Sep 30 14:18:40 2020	30042	findsoln -eqb -xrel -zrel -T 1 -es 1e-8 -sigma symmetries sample.nc 
+Wed Sep 30 14:19:39 2020	30383	findsoln -eqb -xrel -zrel -T 1 -es 1e-8 -sigma symmetries sample.nc 
+Wed Sep 30 14:25:29 2020	30875	findsoln -eqb -xrel -zrel -T 1 -es 1e-8 -sigma symmetries sample.nc 
+Wed Sep 30 14:26:59 2020	31022	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:37:31 2020	31644	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:44:36 2020	31962	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:45:44 2020	32160	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:46:28 2020	32262	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:47:36 2020	32386	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:48:21 2020	32515	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:48:45 2020	32595	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 14:50:34 2020	326	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 15:11:44 2020	2106	findsoln -eqb -T 1 -es 1e-8 sample.nc 
+Wed Sep 30 20:53:33 2020	10608	findsoln -eqb -T 1 sample.nc 
+Wed Sep 30 20:54:14 2020	10814	findsoln -eqb -T 1 sample.nc 
+Wed Sep 30 20:55:04 2020	10937	findsoln -eqb -T 1 sample.nc 
+Wed Sep 30 20:56:38 2020	11188	findsoln -eqb -T 1 sample.nc 
+Wed Sep 30 20:58:40 2020	11357	findsoln -eqb -T 0.1 sample.nc 
+Wed Sep 30 21:03:50 2020	12054	findsoln -eqb -T 10 sample.nc 
+Thu Oct  1 17:57:19 2020	9563	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:57:19 2020	9565	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:57:19 2020	9564	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:57:19 2020	9573	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:58:23 2020	9748	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:58:23 2020	9747	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:58:23 2020	9749	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 17:58:23 2020	9750	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:00:13 2020	9967	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:00:13 2020	9968	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:00:13 2020	9969	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:00:13 2020	9970	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:06 2020	10281	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:06 2020	10282	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:06 2020	10283	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:06 2020	10284	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:28 2020	10430	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:28 2020	10429	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:28 2020	10431	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:28 2020	10432	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:53 2020	10582	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:53 2020	10583	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:53 2020	10584	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:02:53 2020	10585	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:06 2020	10778	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:06 2020	10779	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:06 2020	10780	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:06 2020	10781	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:41 2020	10964	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:41 2020	10965	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:41 2020	10966	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:05:41 2020	10967	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:06:26 2020	11115	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:06:26 2020	11116	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:06:26 2020	11117	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:06:26 2020	11118	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:16:06 2020	11539	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:16:07 2020	11542	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:16:07 2020	11540	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:16:07 2020	11541	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:17:21 2020	11709	findsoln -T 1 -eqb -np0 2 -np1 2 sample.nc 
+Thu Oct  1 18:17:21 2020	11712	findsoln -T 1 -eqb -np0 2 -np1 2 sample.nc 
+Thu Oct  1 18:17:21 2020	11711	findsoln -T 1 -eqb -np0 2 -np1 2 sample.nc 
+Thu Oct  1 18:17:21 2020	11710	findsoln -T 1 -eqb -np0 2 -np1 2 sample.nc 
+Thu Oct  1 18:17:39 2020	11846	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:17:39 2020	11847	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:17:39 2020	11848	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:17:39 2020	11849	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:18:23 2020	12036	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:18:23 2020	12037	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:18:23 2020	12039	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:18:23 2020	12038	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:19:04 2020	12186	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:19:04 2020	12187	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:19:04 2020	12188	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:19:04 2020	12189	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:21:07 2020	12416	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:21:07 2020	12417	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:21:07 2020	12418	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:21:07 2020	12419	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:05 2020	12569	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:05 2020	12570	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:05 2020	12571	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:05 2020	12572	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:36 2020	12718	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:36 2020	12721	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:36 2020	12720	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:22:36 2020	12719	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:23 2020	12928	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:23 2020	12929	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:23 2020	12930	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:23 2020	12931	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:41 2020	13095	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:41 2020	13096	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:41 2020	13097	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:25:41 2020	13098	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:26:12 2020	13268	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:26:12 2020	13269	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:26:12 2020	13270	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:26:12 2020	13271	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:28:48 2020	13535	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:28:48 2020	13536	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:28:48 2020	13537	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:28:48 2020	13538	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:14 2020	13690	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:14 2020	13693	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:14 2020	13691	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:14 2020	13692	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:31 2020	13851	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:31 2020	13852	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:31 2020	13853	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:29:31 2020	13854	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:22 2020	14047	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:22 2020	14049	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:22 2020	14048	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:22 2020	14050	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:31 2020	14202	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:31 2020	14204	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:31 2020	14203	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:31:31 2020	14208	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:19 2020	14542	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:19 2020	14543	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:19 2020	14544	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:19 2020	14545	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:53 2020	14723	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:53 2020	14724	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:53 2020	14725	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:53 2020	14726	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14853	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14854	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14855	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14856	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14857	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14858	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14859	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:34:58 2020	14874	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:36:55 2020	15145	findsoln -T 1 -eqb sample.nc 
+Thu Oct  1 18:36:55 2020	15146	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:20:46 2020	10115	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:20:46 2020	10114	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:21:22 2020	10236	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:21:22 2020	10237	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:30:14 2020	11966	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:30:14 2020	11967	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:35:37 2020	13300	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:35:37 2020	13301	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:38:42 2020	14433	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:38:42 2020	14434	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14558	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14561	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14562	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14559	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14560	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14563	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14564	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:39:32 2020	14565	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14886	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14887	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14888	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14889	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14890	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14891	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14892	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:40:41 2020	14893	findsoln -T 20 -eqb sample.nc 
+Fri Oct  2 15:43:40 2020	15235	findsoln -T 0.1 -eqb sample.nc 
+Fri Oct  2 15:44:27 2020	15346	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:43 2020	15552	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:43 2020	15553	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:43 2020	15550	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:44 2020	15555	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:44 2020	15556	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:44 2020	15557	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:44 2020	15551	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:46:44 2020	15554	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:50:49 2020	16223	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:52:50 2020	16699	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:48 2020	16863	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:48 2020	16864	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:48 2020	16865	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:48 2020	16866	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:48 2020	16867	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:48 2020	16868	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:49 2020	16870	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 15:54:49 2020	16871	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17582	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17585	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17583	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17584	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17586	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17587	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17588	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:11:27 2020	17590	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17849	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17848	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17850	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17851	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17853	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17852	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17855	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 16:13:23 2020	17856	findsoln -T 20 -es 1e-6 -eqb sample.nc 
+Fri Oct  2 17:38:10 2020	2878	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 17:38:10 2020	2880	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 17:38:10 2020	2879	findsoln -T 1 -eqb sample.nc 
+Fri Oct  2 17:38:10 2020	2881	findsoln -T 1 -eqb sample.nc 
+Mon Oct  5 16:02:04 2020	22070	findsoln -T 1 -eqb sample.nc 
+Mon Oct  5 16:06:15 2020	22431	findsoln -T 1 -eqb sample.nc 
+Mon Oct  5 16:15:47 2020	22880	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:37:46 2020	26506	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:43:43 2020	28619	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:46:21 2020	28837	findsoln -T 0.1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:49:03 2020	29071	findsoln -T 0.1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:50:09 2020	29236	findsoln -T 0.1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:50:50 2020	29380	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:52:28 2020	29716	findsoln -T 0.1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 17:54:55 2020	29890	findsoln -T 0.1 -eqb -es 1e-8 -Ng 10 sample.nc 
+Mon Oct  5 17:57:02 2020	30087	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:03:17 2020	30378	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:45 2020	30626	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:45 2020	30629	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30627	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30631	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30630	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30633	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30632	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30634	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30635	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30636	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30637	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30638	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30639	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30641	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30642	findsoln -T 1 -eqb -es 1e-8 sample.nc 
+Mon Oct  5 18:05:46 2020	30640	findsoln -T 1 -eqb -es 1e-8 sample.nc 

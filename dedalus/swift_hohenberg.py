@@ -40,39 +40,55 @@ class DedalusPy:
 
     def problem_setup(self, mu):
         # Problem
-        self.problem = de.IVP(self.domain, variables=['u', 'ux', 'uxx'])
-        self.problem.parameters['r'] = mu
-        self.problem.parameters['qc'] = 0.5
-        self.problem.parameters['v'] = 0.41
-        self.problem.parameters['g'] = 1
-        # self.problem.parameters['u0'] = np.ones(self.Nx)
-        # self.problem.add_equation("dt(u) - a*dx(ux) - b*dx(uxx) = -u*ux")
-        self.problem.add_equation("dt(u) -(r-qc*qc*qc*qc)*u + 2*qc*qc*uxx + dx(dx(uxx)) = v*u*u - g*u*u*u")
-        self.problem.add_equation("ux - dx(u) = 0")
-        self.problem.add_equation("uxx - dx(ux) = 0")
+        #swift-hohenberg:
+        
+        # self.problem = de.IVP(self.domain, variables=['u', 'ux', 'uxx'])
+        # self.problem.parameters['r'] = mu
+        # self.problem.parameters['qc'] = 0.5
+        # self.problem.parameters['v'] = 0.41
+        # self.problem.parameters['g'] = 1
+        # self.problem.add_equation("dt(u) -(r-qc*qc*qc*qc)*u + 2*qc*qc*uxx + dx(dx(uxx)) = v*u*u - g*u*u*u")
+        # self.problem.add_equation("ux - dx(u) = 0")
+        # self.problem.add_equation("uxx - dx(ux) = 0")
+
+        #travelling wave:
+        self.problem = de.IVP(self.domain, variables=['u', 'ux'])
+        self.problem.parameters['k'] = 2*np.pi/(5*self.Lc) 
+        self.problem.parameters['w'] = 2*np.pi/200
+        self.problem.add_equation("dt(ux) - (w/k)*(w/k)*dx(dx(u)) = 0")
+        self.problem.add_equation("dt(u) - ux = 0")
 
     def build_solver(self):
         # Build solver
         self.solver = self.problem.build_solver(de.timesteppers.RK443)
         self.solver.stop_wall_time = np.inf
-        self.solver.stop_iteration = 5000
+
+        #  -------------edited for travelling wave ----------------
+        self.solver.stop_iteration = 50000
 
     def init_problem(self):
         # Initial conditions
         self.x = self.domain.grid(0)
         self.u = self.solver.state['u']
         self.ux = self.solver.state['ux']
-        self.uxx = self.solver.state['uxx']
+
+        #  -------------edited for travelling wave ----------------
+        # self.uxx = self.solver.state['uxx']
 
         self.n = 20
-        r = self.problem.parameters['r']
-        qc = self.problem.parameters['qc']
-        gamma3 = 8.356
-        # self.u['g'] = 0.1*np.ones(len(self.u['g']))
-        # self.u['g'] = 1*np.cos(2*np.pi*(self.x-self.Lx/2)/self.Lc) #0.1*np.random.rand(len(self.u['g'])) #.random.rand(self.Nx) #0.1*np.sin(2*self.x)  #
-        self.u['g'] = 2*math.sqrt(-2*r/gamma3)*(1/np.cosh((self.x-self.Lx/2)*math.sqrt(-r)/(2*qc)))*(0.15 + np.cos(qc*(self.x-self.Lx/2)))
-        self.u.differentiate(0, out=self.ux)
-        self.ux.differentiate(0, out=self.uxx)
+        #swift-hohenberg: 
+        # r = self.problem.parameters['r']
+        # qc = self.problem.parameters['qc']
+        # gamma3 = 8.356
+        # # self.u['g'] = 0.1*np.ones(len(self.u['g']))
+        # # self.u['g'] = 1*np.cos(2*np.pi*(self.x-self.Lx/2)/self.Lc) #0.1*np.random.rand(len(self.u['g'])) #.random.rand(self.Nx) #0.1*np.sin(2*self.x)  #
+        # self.u['g'] = 2*math.sqrt(-2*r/gamma3)*(1/np.cosh((self.x-self.Lx/2)*math.sqrt(-r)/(2*qc)))*(0.15 + np.cos(qc*(self.x-self.Lx/2)))
+        # self.u.differentiate(0, out=self.ux)
+        # self.ux.differentiate(0, out=self.uxx)
+
+        #travelling wave:
+        self.u['g'] = 1*np.sin(self.problem.parameters['k']*self.x) 
+        self.ux['g'] = 1*self.problem.parameters['w']*np.cos(self.problem.parameters['k']*self.x) 
 
         # Store data for final plot
         self.u.set_scales(1)
@@ -95,9 +111,6 @@ class DedalusPy:
             #         if i == 0: self.u['g'][nx] = u_init[i*(self.Ny+self.Nx+self.Nz)+ny*(self.Nx+self.Nz)+nx*self.Nz+nz]
                     # elif i == 1: self.v[nx,ny,nz] = u_init[i*(self.Ny+self.Nx+self.Nz)+ny*(self.Nx+self.Nz)+nx*self.Nz+nz]
                     # elif i == 2: self.w[nx,ny,nz] = u_init[i*(self.Ny+self.Nx+self.Nz)+ny*(self.Nx+self.Nz)+nx*self.Nz+nz]
-        # T = 100*dt
-        # print("2-Norm before timestepping is: "+str(np.linalg.norm(self.u['g'],2)))
-        # print("u before timestepping is: "+str(self.u['g'][0]))
         print("Integrating in dedalus, T = "+str(T))
         u_temp = np.copy(self.u['g'])
         self.u.set_scales(self.scale)
@@ -105,8 +118,6 @@ class DedalusPy:
             self.solver.step(dt)
         self.u.set_scales(1)
         print("G: "+str(np.linalg.norm(self.u['g']-u_temp,1)/T))
-        # print("u after timestepping is: "+str(self.u['g'][0]))
-        # print("Length of output array in python is:"+str(len(self.u['g']))+"\n)
         print("2-Norm of u:"+str(np.linalg.norm(self.u['g'],2))+'\n')
         return(self.u['g'])
 
@@ -163,7 +174,9 @@ if __name__=="__main__":
     plt.colorbar()
     plt.xlabel('x')
     plt.ylabel('t')
-    plt.title('Swift-Honenberg, r=%g' %(sh.problem.parameters['r']))
+
+    #  -------------edited for travelling wave ----------------
+    plt.title('Swift-Honenberg, r=%g' %(sh.problem.parameters['k']))   
     # plt.savefig('Swift_Honenberg.pdf',format='pdf')
     plt.savefig('Swift_Honenberg.png')
     plt.show()

@@ -1,0 +1,9 @@
+Command:  continuesoln --continuation P -eqb -T 1 -al -es 1e-6 -mui -0.1 -dmu 0.0005 -ns 1000 sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/active_media/polar/continuation
+Host:     savya-X510UNR, PID: 21814
+Time:     2020-10-05 04:00:14
+Version:  2.0.2
+Git rev:  ff4948d34b08fd077cf29525d8f59172bd2fc691
+Compiler: GNU 7.5.0
+
+

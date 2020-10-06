@@ -1,0 +1,9 @@
+Command:  findsoln -eqb -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 --sigma symmetries sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/findsoln_localized_branch/symmetric
+Host:     savya-X510UNR, PID: 9823
+Time:     2020-09-18 01:47:17
+Version:  2.0.2
+Git rev:  51e2c95897028778293a8d13ed948bcfecf4bafb
+Compiler: GNU 7.5.0
+
+

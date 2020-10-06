@@ -1,0 +1,9 @@
+Command:  findsoln -eqb -T 1 sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/active_media/isotropic
+Host:     savya-X510UNR, PID: 2100
+Time:     2020-10-06 06:43:14
+Version:  2.0.2
+Git rev:  ff4948d34b08fd077cf29525d8f59172bd2fc691
+Compiler: GNU 7.5.0
+
+

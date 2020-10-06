@@ -1,0 +1,9 @@
+Command:  findsoln -eqb -xrel -T 100 -es 1e-6 -np0 4 -np1 4 -sigma symmetries sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/findsoln_localized_branch/travelling
+Host:     savya-X510UNR, PID: 12775
+Time:     2020-09-24 04:22:17
+Version:  2.0.2
+Git rev:  ff4948d34b08fd077cf29525d8f59172bd2fc691
+Compiler: GNU 7.5.0
+
+

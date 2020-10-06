@@ -1,0 +1,71 @@
+Tue Sep 22 19:36:18 2020	21213	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:30:38 2020	22698	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:35:14 2020	23109	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:37:08 2020	23316	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:37:47 2020	23410	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:38:11 2020	23487	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:38:31 2020	23584	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:40:30 2020	23837	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:40:44 2020	23935	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:45:30 2020	24333	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:45:41 2020	24413	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:45:55 2020	24524	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:47:21 2020	24668	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Tue Sep 22 21:53:29 2020	25140	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:21:25 2020	26821	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:22:11 2020	26976	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:23:48 2020	27282	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:24:27 2020	27381	findsoln -eqb -xrel -T 10 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:25:14 2020	27541	findsoln -eqb -xrel -T 20 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:26:58 2020	27863	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 sample.nc 
+Thu Sep 24 13:31:37 2020	28116	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -axRef 31.4 sample.nc 
+Thu Sep 24 13:39:13 2020	28767	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -axRef 31.4 -symms symmetries sample.nc 
+Thu Sep 24 13:39:52 2020	28869	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -axRef 31.4 sample.nc 
+Thu Sep 24 13:42:15 2020	29058	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -axRef 31.4 sample.nc 
+Thu Sep 24 13:49:10 2020	29504	findsoln -eqb -xrel -T 200 -es 1e-8 -np0 4 -np1 4 -axRef 62.8 sample.nc 
+Thu Sep 24 13:51:09 2020	29695	findsoln -eqb -xrel -T 50 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -axRef 15 sample.nc 
+Thu Sep 24 13:51:54 2020	29867	findsoln -eqb -xrel -T 50 -eg 0.1 -es 1e-10 -np0 4 -np1 4 -axRef 15 sample.nc 
+Thu Sep 24 13:52:29 2020	30121	findsoln -eqb -xrel -T 50 -eg 0.1 -es 1e-10 -np0 4 -np1 4 -axRef 15 sample.nc 
+Thu Sep 24 13:54:37 2020	30319	findsoln -eqb -xrel -T 50 -eg 0.1 -es 1e-1 -np0 4 -np1 4 -axRef 15 sample.nc 
+Thu Sep 24 13:55:12 2020	30604	findsoln -eqb -xrel -T 50 -eg 0.1 -es 10 -np0 4 -np1 4 -axRef 15 sample.nc 
+Thu Sep 24 13:55:57 2020	30863	findsoln -eqb -xrel -T 50 -eg 0.1 -es 10 -np0 4 -np1 4 -axRef 15 sample.nc 
+Thu Sep 24 13:56:25 2020	30993	findsoln -eqb -xrel -T 50 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -axRef 15.5 sample.nc 
+Thu Sep 24 13:57:56 2020	31266	findsoln -eqb -xrel -T 50 -es 1e-8 -np0 4 -np1 4 -axRef 15.5 sample.nc 
+Thu Sep 24 14:01:36 2020	31550	findsoln -eqb -xrel -T 50 -es 1e-8 -np0 4 -np1 4 -axRef 15.70796 sample.nc 
+Thu Sep 24 14:02:17 2020	31652	findsoln -eqb -xrel -T 50 -es 1e-5 -np0 4 -np1 4 -axRef 15.70796 sample.nc 
+Thu Sep 24 14:05:08 2020	31882	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -axRef 31.4 sample.nc 
+Thu Sep 24 14:10:22 2020	32177	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:27:40 2020	1161	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:31:41 2020	1733	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:36:30 2020	2367	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:42:07 2020	2829	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:42:25 2020	2963	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:46:05 2020	3487	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:46:18 2020	3570	findsoln -eqb -xrel -T 100 -eg 0.1 -es 10 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:49:53 2020	3814	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:52:27 2020	4093	findsoln -eqb -xrel -T 50 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:54:39 2020	4323	findsoln -eqb -xrel -T 200 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:55:11 2020	4420	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries sample.nc 
+Thu Sep 24 14:57:35 2020	4664	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -31.4 sample.nc 
+Thu Sep 24 14:57:50 2020	4767	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:02:57 2020	6103	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:10:17 2020	6525	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:10:41 2020	6631	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:12:40 2020	7799	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:14:57 2020	8570	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -symms symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:16:07 2020	8747	findsoln -eqb -xrel -T 300 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:16:36 2020	8826	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:23:20 2020	9393	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries -axRef -0.125 sample.nc 
+Thu Sep 24 15:25:11 2020	9556	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 15:35:10 2020	10157	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 15:36:41 2020	10359	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 15:36:57 2020	10435	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:08:05 2020	11359	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-5 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:08:33 2020	11438	findsoln -eqb -xrel -T 100 -es 1e-8 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:10:11 2020	11680	findsoln -eqb -xrel -T 100 -es 1e-8 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:16:40 2020	12087	findsoln -eqb -xrel -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:17:26 2020	12177	findsoln -eqb -xrel -T 100 -es 1e-8 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:20:02 2020	12353	findsoln -eqb -xrel -T 100 -es 1e-6 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:21:00 2020	12525	findsoln -eqb -xrel -T 100 -es 1e-6 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:21:24 2020	12660	findsoln -eqb -xrel -T 100 -es 1e-6 -np0 4 -np1 4 -sigma symmetries sample.nc 
+Thu Sep 24 16:22:17 2020	12775	findsoln -eqb -xrel -T 100 -es 1e-6 -np0 4 -np1 4 -sigma symmetries sample.nc 

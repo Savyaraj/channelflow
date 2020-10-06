@@ -400,7 +400,6 @@ VectorXd NewtonAlgorithm::solve(DSI& dsiG, const VectorXd& y0, Real& gx) {
         x(i) = x0(i);
 
     VectorXd Gx = evalWithAC(x, fcount_newton_);  // 0 ==> current best guess
-
     string filebase = "best";
 
     // From here on, scale/unscale x when interfacing with the external world
@@ -597,7 +596,7 @@ VectorXd NewtonAlgorithm::solve(DSI& dsiG, const VectorXd& y0, Real& gx) {
 
         } else if (searchflags.solver == SolverGMRES) {
             // iteratively solve with GMRES
-
+            cout<<"I am process "<<mpirank()<<endl;
             // Set up RHS vector b = -G(x)
             VectorXd b(Nunk);  // RHS vector
             setToZero(b);

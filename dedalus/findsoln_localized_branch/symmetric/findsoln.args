@@ -1,0 +1,1 @@
+Fri Sep 18 13:47:17 2020	9823	findsoln -eqb -T 100 -eg 0.1 -es 1e-8 -np0 4 -np1 4 --sigma symmetries sample.nc 

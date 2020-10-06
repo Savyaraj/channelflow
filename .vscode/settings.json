@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "dense": "cpp",
+        "iosfwd": "cpp",
+        "ostream": "cpp"
+    }
+}
