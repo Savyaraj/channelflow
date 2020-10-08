@@ -83,7 +83,7 @@ int main(int argc, char* argv[]) {
         //                                   u, N->getLogstream()));
 
         unique_ptr<dedalusDSI> dsi;
-        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(dnsflags, sigma, 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize, unormalize,
+        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(sigma, 0, dnsflags.T, Tsearch, Rxsearch, Rzsearch, Tnormalize, unormalize,
                                           u, N->getLogstream()));
 
         VectorXd x_singleShot;
