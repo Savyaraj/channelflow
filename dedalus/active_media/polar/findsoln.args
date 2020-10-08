@@ -9,3 +9,6 @@ Tue Oct  6 19:22:29 2020	5181	findsoln -eqb -T 1 sample.nc
 Tue Oct  6 19:23:43 2020	5372	findsoln -eqb -T 1 sample.nc 
 Tue Oct  6 19:26:18 2020	5780	findsoln -eqb -T 1 sample.nc 
 Tue Oct  6 19:29:58 2020	6107	findsoln -eqb -T 1 sample.nc 
+Tue Oct  6 19:39:12 2020	6881	findsoln -eqb -T 1 sample.nc 
+Tue Oct  6 19:45:29 2020	7314	findsoln -eqb -T 1 -dmin 1e-20 sample.nc 
+Tue Oct  6 19:49:10 2020	7591	findsoln -eqb -T 1 sample.nc 

@@ -20,9 +20,9 @@ logger = logging.getLogger(__name__)
 class DedalusPy:
     
     def __init__(self):
-        self.dt = 5e-2
+        self.dt = 3e-2
         self.N = 64
-        self.mu = -0.101
+        self.mu = -0.10
         self.timestepper = de.timesteppers.RK443
         self.Niter = 1000
         self.domain_setup()

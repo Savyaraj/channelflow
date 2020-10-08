@@ -83,7 +83,7 @@ int main(int argc, char* argv[]) {
         //                                   u1, N->getLogstream()));
 
         Real L = 2*pi; 
-        Real alpha = -0.1;
+        Real alpha = -1;
         Real beta = 0.5;
         int Nxz = 64;
         FlowField u(Nxz, 6, Nxz, 3, L, L, 0, 1, cfmpi);
