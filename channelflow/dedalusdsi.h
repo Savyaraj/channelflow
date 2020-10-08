@@ -35,29 +35,6 @@
 
 namespace chflow {
 
-enum class deParameter {
-    T,
-    Re,
-    P,
-    Ub,
-    Uw,
-    ReP,
-    Theta,
-    ThArc,
-    ThLx,
-    ThLz,
-    Lx,
-    Lz,
-    Aspect,
-    Diag,
-    Lt,
-    Vs,
-    ReVs,
-    H,
-    HVs,
-    Rot
-};
-
 // converts the string from "fieldstats" in diffops to a vector of Reals
 std::vector<Real> fieldstats_vector(const FlowField& u);
 
@@ -69,7 +46,7 @@ class dedalusDSI : public DSI {
     virtual ~dedalusDSI() {}
 
     /** \brief Initialize dedalusDSI */
-    dedalusDSI(DNSFlags& dnsflags, FieldSymmetry sigma, PoincareCondition* h, TimeStep dt, bool Tsearch, bool xrelative,
+    dedalusDSI(FieldSymmetry sigma, PoincareCondition* h, Real T, bool Tsearch, bool xrelative,
           bool zrelative, bool Tnormalize, Real Unormalize, const FlowField& u, std::ostream* os = &std::cout);
     Eigen::VectorXd eval(const Eigen::VectorXd& x);
     Eigen::VectorXd eval(const Eigen::VectorXd& x0, const Eigen::VectorXd& x1, bool symopt);
@@ -95,11 +72,8 @@ class dedalusDSI : public DSI {
     /// \name Handle continuation parameter
     void updateMu(Real mu) override;
     void chooseMu(std::string muName);
-    void chooseMu(deParameter mu);
     std::string printMu() override;  // document
     void saveParameters(std::string searchdir) override;
-    deParameter s2cPar(std::string muName);
-    std::string cPar2s(deParameter cPar);
     void phaseShift(Eigen::VectorXd& x) override;
     void phaseShift(Eigen::MatrixXd& y) override;
     inline void setPhaseShifts(bool xphasehack, bool zphasehack, bool uUbasehack);
@@ -110,7 +84,6 @@ class dedalusDSI : public DSI {
     Real extractXshift(const Eigen::VectorXd& x) override;
     Real extractZshift(const Eigen::VectorXd& x) override;
 
-    Real getCFL() const { return CFL_; };
     bool XrelSearch() const override { return xrelative_; };
     bool ZrelSearch() const override { return zrelative_; };
     bool Tsearch() const override { return Tsearch_; };
@@ -118,11 +91,9 @@ class dedalusDSI : public DSI {
     void save_array(FlowField& u);
 
    protected:
-    DNSFlags dnsflags_;
     CfMPI* cfmpi_;
     FieldSymmetry sigma_;
     PoincareCondition* h_;
-    TimeStep dt_;
     bool Tsearch_;
     bool xrelative_;
     bool zrelative_;
@@ -131,7 +102,6 @@ class dedalusDSI : public DSI {
     Real azinit_;
     bool Tnormalize_;
     Real Unormalize_;
-    int fcount_;
     int Nx_;
     int Ny_;
     int Nz_;
@@ -140,16 +110,15 @@ class dedalusDSI : public DSI {
     Real Lz_;
     Real ya_;
     Real yb_;
-    Real CFL_;
     int uunk_;
     bool xphasehack_;
     bool zphasehack_;
     bool uUbasehack_;
-
-    deParameter cPar_ = deParameter::T;
     
-    private:
-      PyObject* de_;
+   private:
+    PyObject* de_;
+    std::string muName_;
+    Real mu_;
 };
 
 inline void dedalusDSI::setPhaseShifts(bool xphasehack, bool zphasehack, bool uUbasehack) {
@@ -162,10 +131,10 @@ PyObject* init_dedalus(void);
 
 void advance_dedalus(FlowField& u, Real T, PyObject* de); 
 
-void f(const FlowField& u, Real T, FlowField& f_u, const DNSFlags& flags_, std::ostream& os, PyObject* de);
+void f(const FlowField& u, Real T, FlowField& f_u, std::ostream& os, PyObject* de);
 
 void G_dedalus(const FlowField& u, Real& T, PoincareCondition* h, const FieldSymmetry& sigma, FlowField& Gu,
-const DNSFlags& flags, const TimeStep& dt, bool Tnormalize, Real Unormalize, int& fcount, Real& CFL, PyObject*de,
+bool Tnormalize, Real Unormalize,  PyObject*de,
 std::ostream& os = std::cout);
 
 }  // namespace chflow

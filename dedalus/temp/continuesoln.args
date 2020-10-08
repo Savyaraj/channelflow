@@ -1,0 +1,4 @@
+Thu Oct  8 16:40:51 2020	24940	continuesoln --continuation alpha -eqb sample.nc 
+Thu Oct  8 16:46:24 2020	25236	continuesoln --continuation a -eqb sample.nc 
+Thu Oct  8 16:46:35 2020	25253	continuesoln --continuation a -eqb -T 20 sample.nc 
+Thu Oct  8 16:46:54 2020	25270	continuesoln --continuation b -eqb -T 20 sample.nc 

@@ -229,7 +229,7 @@ int main(int argc, char* argv[]) {
         // dsi = unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma[0], 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize,
         //                                   Unormalize, u[0], N->getLogstream()));
 
-        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(dnsflags, sigma[0], 0, dt, Tsearch, Rxsearch, Rzsearch, Tnormalize,
+        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(sigma[0], 0, dnsflags.T, Tsearch, Rxsearch, Rzsearch, Tnormalize,
                                           Unormalize, u[0], N->getLogstream()));
 
         cout << setprecision(8);

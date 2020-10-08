@@ -1,0 +1,9 @@
+Command:  continuesoln --continuation b -eqb -T 20 sample.nc 
+PWD:      /home/deshmukh/channelflow/dedalus/temp
+Host:     ecpspc10, PID: 25270
+Time:     2020-10-08 04:46:54
+Version:  2.0.2
+Git rev:  0e7e1e3e0147b61cc273cb75093d6294c05409ea
+Compiler: GNU 4.8.4
+
+
