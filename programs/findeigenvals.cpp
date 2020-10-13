@@ -10,6 +10,7 @@
 #include <string>
 #include "cfbasics/cfvector.h"
 #include "channelflow/cfdsi.h"
+#include "channelflow/dedalusdsi.h"
 #include "channelflow/chebyshev.h"
 #include "channelflow/dns.h"
 #include "channelflow/flowfield.h"
@@ -143,9 +144,13 @@ int main(int argc, char* argv[]) {
             cout << "computing sigma f^T(u)..." << endl;
 
         // Construct the dynamical-systems interface object depending on the given parameters.
-        unique_ptr<cfDSI> dsi;
-        dsi =
-            unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma, h, dt, false, false, false, false, 0.0, u, E->getLogstream()));
+        // unique_ptr<cfDSI> dsi;
+        // dsi =
+        //     unique_ptr<cfDSI>(new cfDSI(dnsflags, sigma, h, dt, false, false, false, false, 0.0, u, E->getLogstream()));
+
+        unique_ptr<dedalusDSI> dsi;
+        dsi = unique_ptr<dedalusDSI>(new dedalusDSI(sigma, h, dt, false, false, false, false, 0.0, u, E->getLogstream()));
+        
 
         // Check if sigma f^T(u) - u = 0
         VectorXd x;
@@ -153,8 +158,8 @@ int main(int argc, char* argv[]) {
 
         VectorXd Gx = dsi->eval(x);
 
-        if (taskid == 0)
-            cout << "\nCFL == " << dsi->getCFL() << endl;
+        // if (taskid == 0)
+        //     cout << "\nCFL == " << dsi->getCFL() << endl;
 
         Real l2normGx = L2Norm(Gx);
         if (taskid == 0) {
