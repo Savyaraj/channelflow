@@ -1,0 +1,9 @@
+Command:  findsoln -eqb -T 1 -dmin 1e-15 sample.nc 
+PWD:      /home/savya/Work/ecps/Scripts/channelflow/dedalus/active_media/periodic
+Host:     savya-X510UNR, PID: 19367
+Time:     2020-10-19 10:21:19
+Version:  2.0.2
+Git rev:  bab0381cb952258f3ade0fded6f98879129c692f
+Compiler: GNU 7.5.0
+
+

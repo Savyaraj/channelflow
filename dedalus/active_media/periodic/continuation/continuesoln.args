@@ -1,0 +1,4 @@
+Mon Oct 19 22:36:02 2020	21283	continuesoln --continuation P -eqb -T 1 -es 1e-8 -mui 5.553 -dmu -0.001 sample.nc 
+Mon Oct 19 22:37:21 2020	21443	continuesoln --continuation P -eqb -T 1 -es 1e-8 -mui 5.553555 -dmu -0.001 sample.nc 
+Mon Oct 19 22:39:50 2020	21915	continuesoln --continuation P -eqb -T 1 -es 1e-8 -mui 5.553555555 -dmin 1e-18 -dmu -0.001 sample.nc 
+Mon Oct 19 22:42:36 2020	22428	continuesoln --continuation P -eqb -T 1 -es 1e-6 -mui 5.553555555 -dmin 1e-18 -dmu -0.001 sample.nc 

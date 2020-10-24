@@ -21,12 +21,15 @@ class DedalusPy:
     
     def __init__(self):
         self.dt = 3e-2
-        self.N = 64
-        self.mu = -0.10
+        self.N = 128
+        self.T0 = -0.045
+        self.T2 = 9.1125e-5
+        self.a = self.T0**2/(4*self.T2) - 0.002 
+        self.k_max = np.sqrt(-self.T0/(2*self.T2))
         self.timestepper = de.timesteppers.RK443
-        self.Niter = 1000
+        self.Niter = 10000
         self.domain_setup()
-        self.problem_setup(self.mu)
+        self.problem_setup(self.a)
         self.build_solver(self.Niter)
         self.init_problem()
         print("-----------dedalus problem setup complete--------------\n")
@@ -35,13 +38,14 @@ class DedalusPy:
         # Bases and domain
         self.Nx = self.N
         self.Ny = self.N 
-        self.Lx = np.pi 
-        self.Ly = np.pi 
+        self.Lc = 2*np.pi/self.k_max #np.pi 
+        self.Lx = 10*self.Lc 
+        self.Ly = 10*self.Lc 
         self.Nz = 6
         self.Nd = 3
         self.scale = 3/2
-        self.x_basis = de.Fourier('x', self.Nx, interval=(-self.Lx, self.Lx), dealias=self.scale)
-        self.y_basis = de.Fourier('y', self.Ny, interval=(-self.Ly, self.Ly), dealias=self.scale)
+        self.x_basis = de.Fourier('x', self.Nx, interval=(0, self.Lx), dealias=self.scale)
+        self.y_basis = de.Fourier('y', self.Ny, interval=(0, self.Ly), dealias=self.scale)
         self.domain = de.Domain([self.x_basis, self.y_basis], grid_dtype=np.float64)
 
     def problem_setup(self, mu = -1):
@@ -52,19 +56,21 @@ class DedalusPy:
         self.problem = de.IVP(self.domain, variables=['u','v','w','p']) 
         self.problem.parameters['a'] = mu
         self.problem.parameters['b'] = 0.5
-        self.problem.parameters['Tau_0'] = -0.045
-        self.problem.parameters['Tau_2'] = -self.problem.parameters['Tau_0']**3 
+        self.problem.parameters['Tau_0'] = self.T0
+        self.problem.parameters['Tau_2'] = self.T2
         self.problem.parameters['S'] = -2.5   
 
         #Incompressibility 
         self.problem.add_equation("dx(u) + dy(v) = 0", condition="(nx!=0) or (ny!=0)")
-        self.problem.add_equation("p + S * (u+v) = 0",condition="(nx==0) and (ny==0)")    
+        self.problem.add_equation("p = 0",condition="(nx==0) and (ny==0)")    
 
-        #dynamics 
-        self.problem.add_equation("dt(u) + dx(p) + (-S)*dx(u+v) + a*u - Tau_0*dx(dx(u)) + Tau_2*dx(dx(dx(dx(u)))) = \
-                                   -(1-S)*(u*dx(u) + v*dy(u)) - b*(u*u+v*v)*u")
-        self.problem.add_equation("dt(v) + dy(p) + (-S)*dy(u+v) + a*v - Tau_0*dy(dy(v)) + Tau_2*dy(dy(dy(dy(v)))) = \
-                                   -(1-S)*(u*dx(v) + v*dy(v)) - b*(u*u+v*v)*v") 
+        #dynamics (-S)*dx(u+v) 
+        self.problem.add_equation("dt(u) + dx(p) + a*u - Tau_0*(d(u,x=2) + d(u,y=2)) + Tau_2*(d(u,x=4) + d(u,y=4)) = \
+                                   -(1-S)*(u*dx(u) + v*dy(u)) + (-S/2)*dx(u*u) - b*(u*u+v*v)*u")
+        self.problem.add_equation("dt(v) + dy(p) + a*v - Tau_0*(d(v,x=2) + d(v,y=2)) + Tau_2*(d(v,x=4) + d(v,y=4)) = \
+                                   -(1-S)*(u*dx(v) + v*dy(v)) + (-S/2)*dy(v*v) - b*(u*u+v*v)*v") 
+        # self.problem.add_equation("dt(u) + dx(p) + a*u - Tau_0*d(u,x=2) + Tau_2*d(u,x=4) = 0")
+        # self.problem.add_equation("dt(v) + dy(p) + a*v - Tau_0*d(v,y=2) + Tau_2*d(v,y=4) = 0")
 
         #vorticity
         self.problem.add_equation("w - dx(v) + dy(u) = 0")
@@ -84,12 +90,14 @@ class DedalusPy:
         self.v = self.solver.state['v']
         self.w = self.solver.state['w']
         self.p = self.solver.state['p']
-
         self.u.set_scales(1)
         self.v.set_scales(1)
         #set initial flowfield at random perturbation from queiscent state
-        self.u['g'] = np.random.rand(np.shape(self.p['g'])[0],np.shape(self.p['g'])[1])
-        self.v['g'] = np.random.rand(np.shape(self.p['g'])[0],np.shape(self.p['g'])[1])
+        # self.u['g'] = 0.1*np.random.rand(np.shape(self.p['g'])[0],np.shape(self.p['g'])[1])
+        # k_max = 15
+        self.u['g'] = 1e-2*np.cos(self.k_max*self.y)*np.ones(self.u['g'].shape)
+        # self.v['g'] = -1*np.sin(k_max*self.x)*self.y*np.ones(self.v['g'].shape)
+        # self.v['g'] = 0.1*np.random.rand(np.shape(self.p['g'])[0],np.shape(self.p['g'])[1])
         
         # Store data for final plot
         self.u_list = [np.copy(self.u['g'])]
@@ -120,13 +128,13 @@ class DedalusPy:
 
         print("Integrating in dedalus, T = "+str(T))
 
-        print("u before:"+str(self.u['g'][0,0])+'\n')#str(np.linalg.norm(self.u['g'],2))+'\n')
+        print("u before:"+str(np.linalg.norm(self.u['g'][0]))+'\n')#str(np.linalg.norm(self.u['g'],2))+'\n')
         
         while init_time + T > self.solver.sim_time:
             self.solver.step(self.dt)
         self.u.set_scales(1)
 
-        print("u after:"+str(self.u['g'][0,0])+'\n')
+        print("u after:"+str(np.linalg.norm(self.u['g'][0]))+'\n')#str(np.linalg.norm(self.u['g'],2))+'\n')
         # print("G: "+str(np.linalg.norm(self.u['g']-u_temp,1)/T))
 
         u_out = np.zeros(len(u_init))
@@ -202,7 +210,16 @@ class DedalusPy:
         return 
 
     def save_array(self, arr):
-        np.save("./flowfield", arr)
+        u_chflow = np.zeros([self.Nx,self.Nz,self.Ny,self.Nd])
+
+        ind = 0
+        for i in range(self.Nd):
+            for ny in range(self.Nz):
+                for nx in range(self.Nx):
+                    for nz in range(self.Ny):
+                        u_chflow[nx,ny,nz,i] = arr[ind]
+                        ind = ind + 1
+        np.save("./flowfield", u_chflow)
         return 
 
 # def main():
@@ -210,14 +227,14 @@ if __name__=="__main__":
     # arr = np.ones(10)
     # print(arr)
     # return np.zeros(len(arr))
+    
     Dd = DedalusPy()
     try:
         logger.info('Starting loop')
         start_time = time.time()
         # sh.problem.parameters['r'] = 0.1
         while Dd.solver.proceed:
-            dt = 2e-4
-            Dd.solver.step(dt)
+            Dd.solver.step(Dd.dt)
             if Dd.solver.iteration % 20 == 0:
                 Dd.u.set_scales(1)
                 Dd.u_list.append(np.copy(Dd.u['g']))
@@ -227,10 +244,9 @@ if __name__=="__main__":
                 Dd.w_list.append(np.copy(Dd.w['g']))
                 Dd.t_list.append(Dd.solver.sim_time)
             if Dd.solver.iteration % 100 == 0:
-                print(Dd.w['g'])
-                logger.info('Iteration: %i, Time: %e, dt: %e' %(Dd.solver.iteration, Dd.solver.sim_time, dt))
-                plt.imshow(Dd.w['g'], cmap='hot', interpolation='nearest') # see previous comments
-                plt.pause(0.001)
+                logger.info('Iteration: %i, Time: %e, dt: %e, 2-norm: %e' %(Dd.solver.iteration, Dd.solver.sim_time, Dd.dt,np.linalg.norm(Dd.u['g'][0],2)))
+                # plt.imshow(Dd.u['g'], cmap='hot', interpolation='nearest') # see previous comments
+                # plt.pause(0.001)
     except:
         logger.error('Exception raised, triggering end of main loop.')
         raise
@@ -254,12 +270,12 @@ if __name__=="__main__":
     # plt.pcolormesh(xmesh, ymesh, w_array[-1], cmap='RdBu_r')
     # plt.axis(pad_limits(xmesh, ymesh))
     # plt.colorbar()
-    plt.imshow(w_array[-1])
+    plt.imshow(u_array[-1])
     plt.xlabel('x')
     plt.ylabel('y')
 
     #  -------------edited for travelling wave ----------------
-    plt.title('Vorticity , alpha=%g' %(Dd.problem.parameters['a']))   
+    plt.title('Flowfield , alpha=%g' %(Dd.problem.parameters['a']))   
     # plt.savefig('Vorticity.png')
     plt.show()
 

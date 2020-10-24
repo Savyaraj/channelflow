@@ -1,0 +1,1 @@
+/usr/bin/mpicxx  -O3 -DNDEBUG  -rdynamic CMakeFiles/simulateflow_app.dir/simulateflow.cpp.o  -o simulateflow -Wl,-rpath,/home/savya/Work/ecps/Scripts/channelflow/build/channelflow:/home/savya/Work/ecps/Scripts/channelflow/build/nsolver:/usr/local/lib: ../channelflow/libchflow.so -lpython3.6m ../nsolver/libnsolver.so -lpython3.6m /usr/local/lib/libfftw3.so 

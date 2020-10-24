@@ -6,15 +6,18 @@ Script for plotting flowfields and bifurcation diagrams
 import numpy as np
 import time
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 def plot_array():
     arr = np.load("./flowfield.npy")
-    plt.plot(np.linspace(-40*np.pi,40*np.pi,len(arr)), arr, 'k-')
-    plt.xlabel("$x/L_c$",fontsize=15)
-    plt.ylabel("$u(x)$",fontsize=15)
-    plt.title("Solution Profile, $r=-0.002$",fontsize=15)
-    plt.savefig("localized_solution_b.png")
-    # plt.savefig("localized_solution.pdf")
+    u = arr[:,2,:,0]
+    ax = sns.heatmap(u)
+    # plt.plot(np.linspace(0,10*2*np.pi/15,len(u[0])),u[0], 'k-')
+    # plt.xlabel("$x/L_c$",fontsize=15)
+    # plt.ylabel("$u(x)$",fontsize=15)
+    plt.title("flowfield, $alpha=-0.002$", fontsize=15)
+    plt.savefig("periodic_solution.png")
+    # plt.savefig("periodic_solution.pdf")
     plt.show()
 
 def plot_bifurcation(filenames):
@@ -29,8 +32,8 @@ def plot_bifurcation(filenames):
         plt.xlabel("$r$",fontsize=15)
         plt.ylabel("$||u||_2$",fontsize=15)
         plt.title("Bifurcation diagram",fontsize=15)
-        plt.xlim([-0.02, 0.01])
-        plt.ylim([0, 0.15])
+        # plt.xlim([-0.02, 0.01])
+        # plt.ylim([0, 0.15])
     # file = np.genfromtxt('./MuE_other_side.asc',dtype=float)
     # N_arr = file[1:57,1]
     # mu_arr = file[1:57,0]
@@ -41,5 +44,5 @@ def plot_bifurcation(filenames):
 if __name__=="__main__":
     # plot_bifurcation(['./MuE_snaking_phi_0_1.asc','./MuE_snaking_phi_0_2.asc',
     	# './MuE_periodic_1.asc','./MuE_periodic_2.asc','./MuE_snaking_phi_pi.asc'])
-    # plot_bifurcation(['./MuE.asc'])
-    plot_array()
+    plot_bifurcation(['./MuE.asc'])
+    # plot_array()

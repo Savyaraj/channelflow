@@ -84,6 +84,7 @@ int main(int argc, char* argv[]) {
 
         Real L = 2*pi; 
         Real alpha = -1;
+        Real k = sqrt(0.5/(0.045*0.045));
         Real beta = 0.5;
         int Nxz = 64;
         FlowField u(Nxz, 6, Nxz, 3, L, L, 0, 1, cfmpi);
@@ -94,8 +95,9 @@ int main(int argc, char* argv[]) {
             for (int ny=0; ny<Ny; ++ny){
                 for (int nx=0; nx<Nx; ++nx){
                     for (int nz=0; nz<Nz; ++nz){
-                        Real x = nx*L/Nx - L/2;
-                        if (i==0 && ny==2){u(nx, ny, nz, i) = sqrt(abs(alpha)/beta);}//1*(float)rand()/RAND_MAX;}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
+                        Real z = nz*L/Nz - L/2;
+                        // if (i==0 && ny==2){u(nx, ny, nz, i) = sqrt(abs(alpha)/beta);}//1*(float)rand()/RAND_MAX;}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
+                        if (i==0 && ny==2){u(nx, ny, nz, i) = 0.1*sin(2*pi*k*z);}//1*(float)rand()/RAND_MAX;}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
                         // else if (i==2 && ny==2){u(nx, ny, nz, i) = -u(nx, ny, nz, 0);}//(float)rand()/RAND_MAX;}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
                         // if (i==2 && ny==2){u(nx, ny, nz, i) = 2*sqrt(-2*r/gamma3)*(1/cosh(x*sqrt(-r)/(2*qc)))*(0.15+cos(qc*x))+0.005*(float)rand()/RAND_MAX;}//0.4870017730666727;}// + 0.01*(float)rand()/RAND_MAX;}
                         // if (i==2 && ny==2){u(nx, ny, nz, i) = u_init[nx];}

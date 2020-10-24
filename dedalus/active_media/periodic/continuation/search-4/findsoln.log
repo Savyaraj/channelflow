@@ -1,0 +1,807 @@
+f(u, N, dt, f_u, flags, dt) : f(u, N, dt, f_u, flags, dt) : Computing G(x)
+f(u, N, dt, f_u, flags, dt) : 
+========================================================
+Newton iteration number 0
+Current state of Newton iteration:
+   fcount_newton   == 1
+   fcount_optimiza == 0
+   L2Norm(x)       == 0.0513278
+   L2Norm(dxN)     == 0
+   L2Norm(dxOpt)   == 0
+   L2Dist(x,x0)    == 0
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.12691e-05
+   previous gx == 1.12691e-05
+   current  gx == 1.12691e-05
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 6.34965e-11
+   previous rx == 6.34965e-11
+   current  rx == 6.34965e-11
+         delta == 0.01
+Newt,GMRES == 0,0, f(u, N, dt, f_u, flags, dt) :  res == 0.697936
+Newt,GMRES == 0,1, f(u, N, dt, f_u, flags, dt) :  res == 0.0178099
+Newt,GMRES == 0,2, f(u, N, dt, f_u, flags, dt) :  res == 3.6921e-05
+GMRES converged. Breaking.
+------------------------------------------------
+Beginning hookstep calculations.
+-------------------------------------------
+Hookstep number 0
+delta == 0.01
+Newton step is within trust region: 
+L2Norm(dxN) == 0.00030659 <= 0.01 == delta
+Computing residual of hookstep dxH
+L2Norm(dxH) == 0.00030659
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 6.34965e-11, 2.09433e-12
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   6.34965e-11 residual at current position
+rH       ==   2.09433e-12 residual of newton/hookstep
+Delta_rH ==  -6.14022e-11 actual improvement in residual from newton/hookstep
+
+             -1.32842e-13 lower bound for acceptable improvement
+             -6.33527e-12 upper bound for ok improvement.
+             -4.75145e-11 upper bound for good improvement.
+             -5.70174e-11 upper bound for accurate prediction.
+Delta_rH ==  -6.14022e-11 ------> Accurate <------
+             -6.96879e-11 lower bound for accurate prediction.
+             -1.32842e-10 local linear model of improvement
+lambda       == 0.929749 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.00929749 is the delta suggested by quadratic model
+Improvement is Accurate (some form of acceptable).
+Stop adjusting trust region and take a step because
+Improvement is merely Poor, Ok, or Good : 0
+Newton step is within trust region      : 1
+Backup step is better                   : 0
+Delta has reached local limit           : 0
+Take current step and leave delta unchanged, for the following reasons:
+improvement            : Accurate
+|newtonstep| <= delta  : true
+delta >= deltaMax      : false
+delta == 0.01
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 2.04662e-06
+rx           == 2.09433e-12
+L2Norm(dxN)  == 0.00030659
+L2Norm(dxOpt)== 0.00030659
+========================================================
+Newton iteration number 1
+Current state of Newton iteration:
+   fcount_newton   == 4
+   fcount_optimiza == 2
+   L2Norm(x)       == 0.0516344
+   L2Norm(dxN)     == 0.00030659
+   L2Norm(dxOpt)   == 0.00030659
+   L2Dist(x,x0)    == 0.00030659
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.12691e-05
+   previous gx == 1.12691e-05
+   current  gx == 2.04662e-06
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 6.34965e-11
+   previous rx == 6.34965e-11
+   current  rx == 2.09433e-12
+         delta == 0.01
+Newt,GMRES == 1,0, f(u, N, dt, f_u, flags, dt) :  res == 0.755991
+Newt,GMRES == 1,1, f(u, N, dt, f_u, flags, dt) :  res == 0.657555
+Newt,GMRES == 1,2, f(u, N, dt, f_u, flags, dt) :  res == 0.657231
+Newt,GMRES == 1,3, f(u, N, dt, f_u, flags, dt) :  res == 0.655797
+Newt,GMRES == 1,4, f(u, N, dt, f_u, flags, dt) :  res == 0.640112
+Newt,GMRES == 1,5, f(u, N, dt, f_u, flags, dt) :  res == 0.583302
+Newt,GMRES == 1,6, f(u, N, dt, f_u, flags, dt) :  res == 0.378373
+Newt,GMRES == 1,7, f(u, N, dt, f_u, flags, dt) :  res == 0.295354
+Newt,GMRES == 1,8, f(u, N, dt, f_u, flags, dt) :  res == 0.209005
+Newt,GMRES == 1,9, f(u, N, dt, f_u, flags, dt) :  res == 0.115391
+Newt,GMRES == 1,10, f(u, N, dt, f_u, flags, dt) :  res == 0.0773223
+Newt,GMRES == 1,11, f(u, N, dt, f_u, flags, dt) :  res == 0.0563333
+Newt,GMRES == 1,12, f(u, N, dt, f_u, flags, dt) :  res == 0.0472282
+Newt,GMRES == 1,13, f(u, N, dt, f_u, flags, dt) :  res == 0.0422596
+Newt,GMRES == 1,14, f(u, N, dt, f_u, flags, dt) :  res == 0.0396807
+Newt,GMRES == 1,15, f(u, N, dt, f_u, flags, dt) :  res == 0.0383849
+Newt,GMRES == 1,16, f(u, N, dt, f_u, flags, dt) :  res == 0.0361145
+Newt,GMRES == 1,17, f(u, N, dt, f_u, flags, dt) :  res == 0.0350815
+Newt,GMRES == 1,18, f(u, N, dt, f_u, flags, dt) :  res == 0.0336159
+Newt,GMRES == 1,19, f(u, N, dt, f_u, flags, dt) :  res == 0.0322291
+Newt,GMRES == 1,20, f(u, N, dt, f_u, flags, dt) :  res == 0.0309523
+Newt,GMRES == 1,21, f(u, N, dt, f_u, flags, dt) :  res == 0.0299305
+Newt,GMRES == 1,22, f(u, N, dt, f_u, flags, dt) :  res == 0.0289906
+Newt,GMRES == 1,23, f(u, N, dt, f_u, flags, dt) :  res == 0.0282056
+Newt,GMRES == 1,24, f(u, N, dt, f_u, flags, dt) :  res == 0.0273385
+Newt,GMRES == 1,25, f(u, N, dt, f_u, flags, dt) :  res == 0.0265034
+Newt,GMRES == 1,26, f(u, N, dt, f_u, flags, dt) :  res == 0.0261778
+Newt,GMRES == 1,27, f(u, N, dt, f_u, flags, dt) :  res == 0.0259614
+Newt,GMRES == 1,28, f(u, N, dt, f_u, flags, dt) :  res == 0.0258228
+Newt,GMRES == 1,29, f(u, N, dt, f_u, flags, dt) :  res == 0.0257638
+Newt,GMRES == 1,30, f(u, N, dt, f_u, flags, dt) :  res == 0.0257631
+Newt,GMRES == 1,31, f(u, N, dt, f_u, flags, dt) :  res == 0.0257539
+Newt,GMRES == 1,32, f(u, N, dt, f_u, flags, dt) :  res == 0.0256689
+Newt,GMRES == 1,33, f(u, N, dt, f_u, flags, dt) :  res == 0.02564
+Newt,GMRES == 1,34, f(u, N, dt, f_u, flags, dt) :  res == 0.0256164
+Newt,GMRES == 1,35, f(u, N, dt, f_u, flags, dt) :  res == 0.0256107
+Newt,GMRES == 1,36, f(u, N, dt, f_u, flags, dt) :  res == 0.0256097
+Newt,GMRES == 1,37, f(u, N, dt, f_u, flags, dt) :  res == 0.0255702
+Newt,GMRES == 1,38, f(u, N, dt, f_u, flags, dt) :  res == 0.0255064
+Newt,GMRES == 1,39, f(u, N, dt, f_u, flags, dt) :  res == 0.0253511
+Newt,GMRES == 1,40, f(u, N, dt, f_u, flags, dt) :  res == 0.0251492
+Newt,GMRES == 1,41, f(u, N, dt, f_u, flags, dt) :  res == 0.0250895
+Newt,GMRES == 1,42, f(u, N, dt, f_u, flags, dt) :  res == 0.0250872
+Newt,GMRES == 1,43, f(u, N, dt, f_u, flags, dt) :  res == 0.0250716
+Newt,GMRES == 1,44, f(u, N, dt, f_u, flags, dt) :  res == 0.0250456
+Newt,GMRES == 1,45, f(u, N, dt, f_u, flags, dt) :  res == 0.0250444
+Newt,GMRES == 1,46, f(u, N, dt, f_u, flags, dt) :  res == 0.0248854
+Newt,GMRES == 1,47, f(u, N, dt, f_u, flags, dt) :  res == 0.0245103
+Newt,GMRES == 1,48, f(u, N, dt, f_u, flags, dt) :  res == 0.0240911
+Newt,GMRES == 1,49, f(u, N, dt, f_u, flags, dt) :  res == 0.0234429
+Newt,GMRES == 1,50, f(u, N, dt, f_u, flags, dt) :  res == 0.0230837
+Newt,GMRES == 1,51, f(u, N, dt, f_u, flags, dt) :  res == 0.0228804
+Newt,GMRES == 1,52, f(u, N, dt, f_u, flags, dt) :  res == 0.0228155
+Newt,GMRES == 1,53, f(u, N, dt, f_u, flags, dt) :  res == 0.0227384
+Newt,GMRES == 1,54, f(u, N, dt, f_u, flags, dt) :  res == 0.0227139
+Newt,GMRES == 1,55, f(u, N, dt, f_u, flags, dt) :  res == 0.0226868
+Newt,GMRES == 1,56, f(u, N, dt, f_u, flags, dt) :  res == 0.0226727
+Newt,GMRES == 1,57, f(u, N, dt, f_u, flags, dt) :  res == 0.0226672
+Newt,GMRES == 1,58, f(u, N, dt, f_u, flags, dt) :  res == 0.022665
+Newt,GMRES == 1,59, f(u, N, dt, f_u, flags, dt) :  res == 0.0226646
+Newt,GMRES == 1,60, f(u, N, dt, f_u, flags, dt) :  res == 0.0226616
+Newt,GMRES == 1,61, f(u, N, dt, f_u, flags, dt) :  res == 0.0226525
+Newt,GMRES == 1,62, f(u, N, dt, f_u, flags, dt) :  res == 0.0226298
+Newt,GMRES == 1,63, f(u, N, dt, f_u, flags, dt) :  res == 0.022589
+Newt,GMRES == 1,64, f(u, N, dt, f_u, flags, dt) :  res == 0.0225883
+Newt,GMRES == 1,65, f(u, N, dt, f_u, flags, dt) :  res == 0.0225845
+Newt,GMRES == 1,66, f(u, N, dt, f_u, flags, dt) :  res == 0.0224896
+Newt,GMRES == 1,67, f(u, N, dt, f_u, flags, dt) :  res == 0.0223969
+Newt,GMRES == 1,68, f(u, N, dt, f_u, flags, dt) :  res == 0.0223851
+Newt,GMRES == 1,69, f(u, N, dt, f_u, flags, dt) :  res == 0.0223136
+Newt,GMRES == 1,70, f(u, N, dt, f_u, flags, dt) :  res == 0.0222378
+Newt,GMRES == 1,71, f(u, N, dt, f_u, flags, dt) :  res == 0.0221575
+Newt,GMRES == 1,72, f(u, N, dt, f_u, flags, dt) :  res == 0.0220009
+Newt,GMRES == 1,73, f(u, N, dt, f_u, flags, dt) :  res == 0.0217317
+Newt,GMRES == 1,74, f(u, N, dt, f_u, flags, dt) :  res == 0.0216348
+Newt,GMRES == 1,75, f(u, N, dt, f_u, flags, dt) :  res == 0.0216348
+Newt,GMRES == 1,76, f(u, N, dt, f_u, flags, dt) :  res == 0.0215969
+Newt,GMRES == 1,77, f(u, N, dt, f_u, flags, dt) :  res == 0.0214697
+Newt,GMRES == 1,78, f(u, N, dt, f_u, flags, dt) :  res == 0.0213287
+Newt,GMRES == 1,79, f(u, N, dt, f_u, flags, dt) :  res == 0.0212844
+Newt,GMRES == 1,80, f(u, N, dt, f_u, flags, dt) :  res == 0.0212793
+Newt,GMRES == 1,81, f(u, N, dt, f_u, flags, dt) :  res == 0.0212672
+Newt,GMRES == 1,82, f(u, N, dt, f_u, flags, dt) :  res == 0.0211968
+Newt,GMRES == 1,83, f(u, N, dt, f_u, flags, dt) :  res == 0.0210621
+Newt,GMRES == 1,84, f(u, N, dt, f_u, flags, dt) :  res == 0.0209639
+Newt,GMRES == 1,85, f(u, N, dt, f_u, flags, dt) :  res == 0.0206246
+Newt,GMRES == 1,86, f(u, N, dt, f_u, flags, dt) :  res == 0.0204081
+Newt,GMRES == 1,87, f(u, N, dt, f_u, flags, dt) :  res == 0.0203712
+Newt,GMRES == 1,88, f(u, N, dt, f_u, flags, dt) :  res == 0.0203524
+Newt,GMRES == 1,89, f(u, N, dt, f_u, flags, dt) :  res == 0.0203032
+Newt,GMRES == 1,90, f(u, N, dt, f_u, flags, dt) :  res == 0.0201768
+Newt,GMRES == 1,91, f(u, N, dt, f_u, flags, dt) :  res == 0.0200433
+Newt,GMRES == 1,92, f(u, N, dt, f_u, flags, dt) :  res == 0.019905
+Newt,GMRES == 1,93, f(u, N, dt, f_u, flags, dt) :  res == 0.0198926
+Newt,GMRES == 1,94, f(u, N, dt, f_u, flags, dt) :  res == 0.0198892
+Newt,GMRES == 1,95, f(u, N, dt, f_u, flags, dt) :  res == 0.0198452
+Newt,GMRES == 1,96, f(u, N, dt, f_u, flags, dt) :  res == 0.019803
+Newt,GMRES == 1,97, f(u, N, dt, f_u, flags, dt) :  res == 0.0197829
+Newt,GMRES == 1,98, f(u, N, dt, f_u, flags, dt) :  res == 0.0197828
+Newt,GMRES == 1,99, f(u, N, dt, f_u, flags, dt) :  res == 0.0197814
+Newt,GMRES == 1,100, f(u, N, dt, f_u, flags, dt) :  res == 0.0197803
+Newt,GMRES == 1,101, f(u, N, dt, f_u, flags, dt) :  res == 0.0197107
+Newt,GMRES == 1,102, f(u, N, dt, f_u, flags, dt) :  res == 0.0195245
+Newt,GMRES == 1,103, f(u, N, dt, f_u, flags, dt) :  res == 0.0192863
+Newt,GMRES == 1,104, f(u, N, dt, f_u, flags, dt) :  res == 0.0189819
+Newt,GMRES == 1,105, f(u, N, dt, f_u, flags, dt) :  res == 0.0187615
+Newt,GMRES == 1,106, f(u, N, dt, f_u, flags, dt) :  res == 0.0187
+Newt,GMRES == 1,107, f(u, N, dt, f_u, flags, dt) :  res == 0.0186714
+Newt,GMRES == 1,108, f(u, N, dt, f_u, flags, dt) :  res == 0.018663
+Newt,GMRES == 1,109, f(u, N, dt, f_u, flags, dt) :  res == 0.0186616
+Newt,GMRES == 1,110, f(u, N, dt, f_u, flags, dt) :  res == 0.0186609
+Newt,GMRES == 1,111, f(u, N, dt, f_u, flags, dt) :  res == 0.0186394
+Newt,GMRES == 1,112, f(u, N, dt, f_u, flags, dt) :  res == 0.01862
+Newt,GMRES == 1,113, f(u, N, dt, f_u, flags, dt) :  res == 0.0185923
+Newt,GMRES == 1,114, f(u, N, dt, f_u, flags, dt) :  res == 0.0185827
+Newt,GMRES == 1,115, f(u, N, dt, f_u, flags, dt) :  res == 0.0185478
+Newt,GMRES == 1,116, f(u, N, dt, f_u, flags, dt) :  res == 0.0185443
+Newt,GMRES == 1,117, f(u, N, dt, f_u, flags, dt) :  res == 0.0185428
+Newt,GMRES == 1,118, f(u, N, dt, f_u, flags, dt) :  res == 0.0185107
+Newt,GMRES == 1,119, f(u, N, dt, f_u, flags, dt) :  res == 0.0184669
+Newt,GMRES == 1,120, f(u, N, dt, f_u, flags, dt) :  res == 0.0183994
+Newt,GMRES == 1,121, f(u, N, dt, f_u, flags, dt) :  res == 0.0181998
+Newt,GMRES == 1,122, f(u, N, dt, f_u, flags, dt) :  res == 0.0180279
+Newt,GMRES == 1,123, f(u, N, dt, f_u, flags, dt) :  res == 0.0179212
+Newt,GMRES == 1,124, f(u, N, dt, f_u, flags, dt) :  res == 0.0178654
+Newt,GMRES == 1,125, f(u, N, dt, f_u, flags, dt) :  res == 0.0178501
+Newt,GMRES == 1,126, f(u, N, dt, f_u, flags, dt) :  res == 0.01785
+Newt,GMRES == 1,127, f(u, N, dt, f_u, flags, dt) :  res == 0.0177891
+Newt,GMRES == 1,128, f(u, N, dt, f_u, flags, dt) :  res == 0.017724
+Newt,GMRES == 1,129, f(u, N, dt, f_u, flags, dt) :  res == 0.0175963
+Newt,GMRES == 1,130, f(u, N, dt, f_u, flags, dt) :  res == 0.0173835
+Newt,GMRES == 1,131, f(u, N, dt, f_u, flags, dt) :  res == 0.0172742
+Newt,GMRES == 1,132, f(u, N, dt, f_u, flags, dt) :  res == 0.0171945
+Newt,GMRES == 1,133, f(u, N, dt, f_u, flags, dt) :  res == 0.0171928
+Newt,GMRES == 1,134, f(u, N, dt, f_u, flags, dt) :  res == 0.0170954
+Newt,GMRES == 1,135, f(u, N, dt, f_u, flags, dt) :  res == 0.0168297
+Newt,GMRES == 1,136, f(u, N, dt, f_u, flags, dt) :  res == 0.016694
+Newt,GMRES == 1,137, f(u, N, dt, f_u, flags, dt) :  res == 0.0166777
+Newt,GMRES == 1,138, f(u, N, dt, f_u, flags, dt) :  res == 0.0165472
+Newt,GMRES == 1,139, f(u, N, dt, f_u, flags, dt) :  res == 0.0161885
+Newt,GMRES == 1,140, f(u, N, dt, f_u, flags, dt) :  res == 0.0157948
+Newt,GMRES == 1,141, f(u, N, dt, f_u, flags, dt) :  res == 0.0156926
+Newt,GMRES == 1,142, f(u, N, dt, f_u, flags, dt) :  res == 0.015688
+Newt,GMRES == 1,143, f(u, N, dt, f_u, flags, dt) :  res == 0.0156828
+Newt,GMRES == 1,144, f(u, N, dt, f_u, flags, dt) :  res == 0.0156828
+Newt,GMRES == 1,145, f(u, N, dt, f_u, flags, dt) :  res == 0.0156703
+Newt,GMRES == 1,146, f(u, N, dt, f_u, flags, dt) :  res == 0.0156339
+Newt,GMRES == 1,147, f(u, N, dt, f_u, flags, dt) :  res == 0.0155971
+Newt,GMRES == 1,148, f(u, N, dt, f_u, flags, dt) :  res == 0.0154909
+Newt,GMRES == 1,149, f(u, N, dt, f_u, flags, dt) :  res == 0.0151996
+Newt,GMRES == 1,150, f(u, N, dt, f_u, flags, dt) :  res == 0.01509
+Newt,GMRES == 1,151, f(u, N, dt, f_u, flags, dt) :  res == 0.0150854
+Newt,GMRES == 1,152, f(u, N, dt, f_u, flags, dt) :  res == 0.0150248
+Newt,GMRES == 1,153, f(u, N, dt, f_u, flags, dt) :  res == 0.0149595
+Newt,GMRES == 1,154, f(u, N, dt, f_u, flags, dt) :  res == 0.0149541
+Newt,GMRES == 1,155, f(u, N, dt, f_u, flags, dt) :  res == 0.0149399
+Newt,GMRES == 1,156, f(u, N, dt, f_u, flags, dt) :  res == 0.0149259
+Newt,GMRES == 1,157, f(u, N, dt, f_u, flags, dt) :  res == 0.0149094
+Newt,GMRES == 1,158, f(u, N, dt, f_u, flags, dt) :  res == 0.0149089
+Newt,GMRES == 1,159, f(u, N, dt, f_u, flags, dt) :  res == 0.0148875
+Newt,GMRES == 1,160, f(u, N, dt, f_u, flags, dt) :  res == 0.0147556
+Newt,GMRES == 1,161, f(u, N, dt, f_u, flags, dt) :  res == 0.014577
+Newt,GMRES == 1,162, f(u, N, dt, f_u, flags, dt) :  res == 0.0144205
+Newt,GMRES == 1,163, f(u, N, dt, f_u, flags, dt) :  res == 0.0144074
+Newt,GMRES == 1,164, f(u, N, dt, f_u, flags, dt) :  res == 0.0143082
+Newt,GMRES == 1,165, f(u, N, dt, f_u, flags, dt) :  res == 0.0142027
+Newt,GMRES == 1,166, f(u, N, dt, f_u, flags, dt) :  res == 0.013976
+Newt,GMRES == 1,167, f(u, N, dt, f_u, flags, dt) :  res == 0.0136181
+Newt,GMRES == 1,168, f(u, N, dt, f_u, flags, dt) :  res == 0.0133794
+Newt,GMRES == 1,169, f(u, N, dt, f_u, flags, dt) :  res == 0.0132305
+Newt,GMRES == 1,170, f(u, N, dt, f_u, flags, dt) :  res == 0.0131915
+Newt,GMRES == 1,171, f(u, N, dt, f_u, flags, dt) :  res == 0.0131902
+Newt,GMRES == 1,172, f(u, N, dt, f_u, flags, dt) :  res == 0.0131899
+Newt,GMRES == 1,173, f(u, N, dt, f_u, flags, dt) :  res == 0.0131898
+Newt,GMRES == 1,174, f(u, N, dt, f_u, flags, dt) :  res == 0.0131844
+Newt,GMRES == 1,175, f(u, N, dt, f_u, flags, dt) :  res == 0.0131756
+Newt,GMRES == 1,176, f(u, N, dt, f_u, flags, dt) :  res == 0.0131446
+Newt,GMRES == 1,177, f(u, N, dt, f_u, flags, dt) :  res == 0.0130482
+Newt,GMRES == 1,178, f(u, N, dt, f_u, flags, dt) :  res == 0.0128267
+Newt,GMRES == 1,179, f(u, N, dt, f_u, flags, dt) :  res == 0.0126011
+Newt,GMRES == 1,180, f(u, N, dt, f_u, flags, dt) :  res == 0.0126009
+Newt,GMRES == 1,181, f(u, N, dt, f_u, flags, dt) :  res == 0.0125021
+Newt,GMRES == 1,182, f(u, N, dt, f_u, flags, dt) :  res == 0.0122586
+Newt,GMRES == 1,183, f(u, N, dt, f_u, flags, dt) :  res == 0.0119942
+Newt,GMRES == 1,184, f(u, N, dt, f_u, flags, dt) :  res == 0.0119389
+Newt,GMRES == 1,185, f(u, N, dt, f_u, flags, dt) :  res == 0.0119366
+Newt,GMRES == 1,186, f(u, N, dt, f_u, flags, dt) :  res == 0.0119355
+Newt,GMRES == 1,187, f(u, N, dt, f_u, flags, dt) :  res == 0.0118726
+Newt,GMRES == 1,188, f(u, N, dt, f_u, flags, dt) :  res == 0.0118636
+Newt,GMRES == 1,189, f(u, N, dt, f_u, flags, dt) :  res == 0.0118631
+Newt,GMRES == 1,190, f(u, N, dt, f_u, flags, dt) :  res == 0.0118507
+Newt,GMRES == 1,191, f(u, N, dt, f_u, flags, dt) :  res == 0.0118492
+Newt,GMRES == 1,192, f(u, N, dt, f_u, flags, dt) :  res == 0.0118481
+Newt,GMRES == 1,193, f(u, N, dt, f_u, flags, dt) :  res == 0.0118384
+Newt,GMRES == 1,194, f(u, N, dt, f_u, flags, dt) :  res == 0.0118279
+Newt,GMRES == 1,195, f(u, N, dt, f_u, flags, dt) :  res == 0.0117296
+Newt,GMRES == 1,196, f(u, N, dt, f_u, flags, dt) :  res == 0.0113737
+Newt,GMRES == 1,197, f(u, N, dt, f_u, flags, dt) :  res == 0.0110596
+Newt,GMRES == 1,198, f(u, N, dt, f_u, flags, dt) :  res == 0.010856
+Newt,GMRES == 1,199, f(u, N, dt, f_u, flags, dt) :  res == 0.0108033
+Newt,GMRES == 1,200, f(u, N, dt, f_u, flags, dt) :  res == 0.0107966
+Newt,GMRES == 1,201, f(u, N, dt, f_u, flags, dt) :  res == 0.0106699
+Newt,GMRES == 1,202, f(u, N, dt, f_u, flags, dt) :  res == 0.0105583
+Newt,GMRES == 1,203, f(u, N, dt, f_u, flags, dt) :  res == 0.0104003
+Newt,GMRES == 1,204, f(u, N, dt, f_u, flags, dt) :  res == 0.0102928
+Newt,GMRES == 1,205, f(u, N, dt, f_u, flags, dt) :  res == 0.0102118
+Newt,GMRES == 1,206, f(u, N, dt, f_u, flags, dt) :  res == 0.0101712
+Newt,GMRES == 1,207, f(u, N, dt, f_u, flags, dt) :  res == 0.0101575
+Newt,GMRES == 1,208, f(u, N, dt, f_u, flags, dt) :  res == 0.0101567
+Newt,GMRES == 1,209, f(u, N, dt, f_u, flags, dt) :  res == 0.0101421
+Newt,GMRES == 1,210, f(u, N, dt, f_u, flags, dt) :  res == 0.0100648
+Newt,GMRES == 1,211, f(u, N, dt, f_u, flags, dt) :  res == 0.00999603
+Newt,GMRES == 1,212, f(u, N, dt, f_u, flags, dt) :  res == 0.00999549
+Newt,GMRES == 1,213, f(u, N, dt, f_u, flags, dt) :  res == 0.00999332
+Newt,GMRES == 1,214, f(u, N, dt, f_u, flags, dt) :  res == 0.00999329
+Newt,GMRES == 1,215, f(u, N, dt, f_u, flags, dt) :  res == 0.00993001
+Newt,GMRES == 1,216, f(u, N, dt, f_u, flags, dt) :  res == 0.00988136
+Newt,GMRES == 1,217, f(u, N, dt, f_u, flags, dt) :  res == 0.00985753
+Newt,GMRES == 1,218, f(u, N, dt, f_u, flags, dt) :  res == 0.00984668
+Newt,GMRES == 1,219, f(u, N, dt, f_u, flags, dt) :  res == 0.00984333
+Newt,GMRES == 1,220, f(u, N, dt, f_u, flags, dt) :  res == 0.00984317
+Newt,GMRES == 1,221, f(u, N, dt, f_u, flags, dt) :  res == 0.00984296
+Newt,GMRES == 1,222, f(u, N, dt, f_u, flags, dt) :  res == 0.00983703
+Newt,GMRES == 1,223, f(u, N, dt, f_u, flags, dt) :  res == 0.00980122
+Newt,GMRES == 1,224, f(u, N, dt, f_u, flags, dt) :  res == 0.00978862
+Newt,GMRES == 1,225, f(u, N, dt, f_u, flags, dt) :  res == 0.00978356
+Newt,GMRES == 1,226, f(u, N, dt, f_u, flags, dt) :  res == 0.00976439
+Newt,GMRES == 1,227, f(u, N, dt, f_u, flags, dt) :  res == 0.00971864
+Newt,GMRES == 1,228, f(u, N, dt, f_u, flags, dt) :  res == 0.00971677
+Newt,GMRES == 1,229, f(u, N, dt, f_u, flags, dt) :  res == 0.00969529
+Newt,GMRES == 1,230, f(u, N, dt, f_u, flags, dt) :  res == 0.00968124
+Newt,GMRES == 1,231, f(u, N, dt, f_u, flags, dt) :  res == 0.00967498
+Newt,GMRES == 1,232, f(u, N, dt, f_u, flags, dt) :  res == 0.00967185
+Newt,GMRES == 1,233, f(u, N, dt, f_u, flags, dt) :  res == 0.00966864
+Newt,GMRES == 1,234, f(u, N, dt, f_u, flags, dt) :  res == 0.00966598
+Newt,GMRES == 1,235, f(u, N, dt, f_u, flags, dt) :  res == 0.00964932
+Newt,GMRES == 1,236, f(u, N, dt, f_u, flags, dt) :  res == 0.0095987
+Newt,GMRES == 1,237, f(u, N, dt, f_u, flags, dt) :  res == 0.00959368
+Newt,GMRES == 1,238, f(u, N, dt, f_u, flags, dt) :  res == 0.0095928
+Newt,GMRES == 1,239, f(u, N, dt, f_u, flags, dt) :  res == 0.0095925
+Newt,GMRES == 1,240, f(u, N, dt, f_u, flags, dt) :  res == 0.00957893
+Newt,GMRES == 1,241, f(u, N, dt, f_u, flags, dt) :  res == 0.00954216
+Newt,GMRES == 1,242, f(u, N, dt, f_u, flags, dt) :  res == 0.00954215
+Newt,GMRES == 1,243, f(u, N, dt, f_u, flags, dt) :  res == 0.00946997
+Newt,GMRES == 1,244, f(u, N, dt, f_u, flags, dt) :  res == 0.00933645
+Newt,GMRES == 1,245, f(u, N, dt, f_u, flags, dt) :  res == 0.00915622
+Newt,GMRES == 1,246, f(u, N, dt, f_u, flags, dt) :  res == 0.00915156
+Newt,GMRES == 1,247, f(u, N, dt, f_u, flags, dt) :  res == 0.0091464
+Newt,GMRES == 1,248, f(u, N, dt, f_u, flags, dt) :  res == 0.00907508
+Newt,GMRES == 1,249, f(u, N, dt, f_u, flags, dt) :  res == 0.00905717
+Newt,GMRES == 1,250, f(u, N, dt, f_u, flags, dt) :  res == 0.00905635
+Newt,GMRES == 1,251, f(u, N, dt, f_u, flags, dt) :  res == 0.00903882
+Newt,GMRES == 1,252, f(u, N, dt, f_u, flags, dt) :  res == 0.00897718
+Newt,GMRES == 1,253, f(u, N, dt, f_u, flags, dt) :  res == 0.00896812
+Newt,GMRES == 1,254, f(u, N, dt, f_u, flags, dt) :  res == 0.00896564
+Newt,GMRES == 1,255, f(u, N, dt, f_u, flags, dt) :  res == 0.00895326
+Newt,GMRES == 1,256, f(u, N, dt, f_u, flags, dt) :  res == 0.00893909
+Newt,GMRES == 1,257, f(u, N, dt, f_u, flags, dt) :  res == 0.00893745
+Newt,GMRES == 1,258, f(u, N, dt, f_u, flags, dt) :  res == 0.00891976
+Newt,GMRES == 1,259, f(u, N, dt, f_u, flags, dt) :  res == 0.00891597
+Newt,GMRES == 1,260, f(u, N, dt, f_u, flags, dt) :  res == 0.00891558
+Newt,GMRES == 1,261, f(u, N, dt, f_u, flags, dt) :  res == 0.00891171
+Newt,GMRES == 1,262, f(u, N, dt, f_u, flags, dt) :  res == 0.00890673
+Newt,GMRES == 1,263, f(u, N, dt, f_u, flags, dt) :  res == 0.00890556
+Newt,GMRES == 1,264, f(u, N, dt, f_u, flags, dt) :  res == 0.00890059
+Newt,GMRES == 1,265, f(u, N, dt, f_u, flags, dt) :  res == 0.00889929
+Newt,GMRES == 1,266, f(u, N, dt, f_u, flags, dt) :  res == 0.00889895
+Newt,GMRES == 1,267, f(u, N, dt, f_u, flags, dt) :  res == 0.00889882
+Newt,GMRES == 1,268, f(u, N, dt, f_u, flags, dt) :  res == 0.0088984
+Newt,GMRES == 1,269, f(u, N, dt, f_u, flags, dt) :  res == 0.00889839
+Newt,GMRES == 1,270, f(u, N, dt, f_u, flags, dt) :  res == 0.00889477
+Newt,GMRES == 1,271, f(u, N, dt, f_u, flags, dt) :  res == 0.0088942
+Newt,GMRES == 1,272, f(u, N, dt, f_u, flags, dt) :  res == 0.0088931
+Newt,GMRES == 1,273, f(u, N, dt, f_u, flags, dt) :  res == 0.00888561
+Newt,GMRES == 1,274, f(u, N, dt, f_u, flags, dt) :  res == 0.00886927
+Newt,GMRES == 1,275, f(u, N, dt, f_u, flags, dt) :  res == 0.00886926
+Newt,GMRES == 1,276, f(u, N, dt, f_u, flags, dt) :  res == 0.00885829
+Newt,GMRES == 1,277, f(u, N, dt, f_u, flags, dt) :  res == 0.00885654
+Newt,GMRES == 1,278, f(u, N, dt, f_u, flags, dt) :  res == 0.00885599
+Newt,GMRES == 1,279, f(u, N, dt, f_u, flags, dt) :  res == 0.00885455
+Newt,GMRES == 1,280, f(u, N, dt, f_u, flags, dt) :  res == 0.0088514
+Newt,GMRES == 1,281, f(u, N, dt, f_u, flags, dt) :  res == 0.00885103
+Newt,GMRES == 1,282, f(u, N, dt, f_u, flags, dt) :  res == 0.00885065
+Newt,GMRES == 1,283, f(u, N, dt, f_u, flags, dt) :  res == 0.00884932
+Newt,GMRES == 1,284, f(u, N, dt, f_u, flags, dt) :  res == 0.00884916
+Newt,GMRES == 1,285, f(u, N, dt, f_u, flags, dt) :  res == 0.00884857
+Newt,GMRES == 1,286, f(u, N, dt, f_u, flags, dt) :  res == 0.00884815
+Newt,GMRES == 1,287, f(u, N, dt, f_u, flags, dt) :  res == 0.00884797
+Newt,GMRES == 1,288, f(u, N, dt, f_u, flags, dt) :  res == 0.00884739
+Newt,GMRES == 1,289, f(u, N, dt, f_u, flags, dt) :  res == 0.00884653
+Newt,GMRES == 1,290, f(u, N, dt, f_u, flags, dt) :  res == 0.00884585
+Newt,GMRES == 1,291, f(u, N, dt, f_u, flags, dt) :  res == 0.0088404
+Newt,GMRES == 1,292, f(u, N, dt, f_u, flags, dt) :  res == 0.00883949
+Newt,GMRES == 1,293, f(u, N, dt, f_u, flags, dt) :  res == 0.00883748
+Newt,GMRES == 1,294, f(u, N, dt, f_u, flags, dt) :  res == 0.00883292
+Newt,GMRES == 1,295, f(u, N, dt, f_u, flags, dt) :  res == 0.0088271
+Newt,GMRES == 1,296, f(u, N, dt, f_u, flags, dt) :  res == 0.00881524
+Newt,GMRES == 1,297, f(u, N, dt, f_u, flags, dt) :  res == 0.0088118
+Newt,GMRES == 1,298, f(u, N, dt, f_u, flags, dt) :  res == 0.00881085
+Newt,GMRES == 1,299, f(u, N, dt, f_u, flags, dt) :  res == 0.0088104
+Newt,GMRES == 1,300, f(u, N, dt, f_u, flags, dt) :  res == 0.00880879
+Newt,GMRES == 1,301, f(u, N, dt, f_u, flags, dt) :  res == 0.0088056
+Newt,GMRES == 1,302, f(u, N, dt, f_u, flags, dt) :  res == 0.00880476
+Newt,GMRES == 1,303, f(u, N, dt, f_u, flags, dt) :  res == 0.00879485
+Newt,GMRES == 1,304, f(u, N, dt, f_u, flags, dt) :  res == 0.00879395
+Newt,GMRES == 1,305, f(u, N, dt, f_u, flags, dt) :  res == 0.00879295
+Newt,GMRES == 1,306, f(u, N, dt, f_u, flags, dt) :  res == 0.00879083
+Newt,GMRES == 1,307, f(u, N, dt, f_u, flags, dt) :  res == 0.00878679
+Newt,GMRES == 1,308, f(u, N, dt, f_u, flags, dt) :  res == 0.00877885
+Newt,GMRES == 1,309, f(u, N, dt, f_u, flags, dt) :  res == 0.00877692
+Newt,GMRES == 1,310, f(u, N, dt, f_u, flags, dt) :  res == 0.00877638
+Newt,GMRES == 1,311, f(u, N, dt, f_u, flags, dt) :  res == 0.00877593
+Newt,GMRES == 1,312, f(u, N, dt, f_u, flags, dt) :  res == 0.00877228
+Newt,GMRES == 1,313, f(u, N, dt, f_u, flags, dt) :  res == 0.00877221
+Newt,GMRES == 1,314, f(u, N, dt, f_u, flags, dt) :  res == 0.00876976
+Newt,GMRES == 1,315, f(u, N, dt, f_u, flags, dt) :  res == 0.00875945
+Newt,GMRES == 1,316, f(u, N, dt, f_u, flags, dt) :  res == 0.0087566
+Newt,GMRES == 1,317, f(u, N, dt, f_u, flags, dt) :  res == 0.00873972
+Newt,GMRES == 1,318, f(u, N, dt, f_u, flags, dt) :  res == 0.00873291
+Newt,GMRES == 1,319, f(u, N, dt, f_u, flags, dt) :  res == 0.00872794
+Newt,GMRES == 1,320, f(u, N, dt, f_u, flags, dt) :  res == 0.00871779
+Newt,GMRES == 1,321, f(u, N, dt, f_u, flags, dt) :  res == 0.00871767
+Newt,GMRES == 1,322, f(u, N, dt, f_u, flags, dt) :  res == 0.0087174
+Newt,GMRES == 1,323, f(u, N, dt, f_u, flags, dt) :  res == 0.00871684
+Newt,GMRES == 1,324, f(u, N, dt, f_u, flags, dt) :  res == 0.00871254
+Newt,GMRES == 1,325, f(u, N, dt, f_u, flags, dt) :  res == 0.00871204
+Newt,GMRES == 1,326, f(u, N, dt, f_u, flags, dt) :  res == 0.00870756
+Newt,GMRES == 1,327, f(u, N, dt, f_u, flags, dt) :  res == 0.00870686
+Newt,GMRES == 1,328, f(u, N, dt, f_u, flags, dt) :  res == 0.00870518
+Newt,GMRES == 1,329, f(u, N, dt, f_u, flags, dt) :  res == 0.00870269
+Newt,GMRES == 1,330, f(u, N, dt, f_u, flags, dt) :  res == 0.00870264
+Newt,GMRES == 1,331, f(u, N, dt, f_u, flags, dt) :  res == 0.00870142
+Newt,GMRES == 1,332, f(u, N, dt, f_u, flags, dt) :  res == 0.0087007
+Newt,GMRES == 1,333, f(u, N, dt, f_u, flags, dt) :  res == 0.00869647
+Newt,GMRES == 1,334, f(u, N, dt, f_u, flags, dt) :  res == 0.00869078
+Newt,GMRES == 1,335, f(u, N, dt, f_u, flags, dt) :  res == 0.00868348
+Newt,GMRES == 1,336, f(u, N, dt, f_u, flags, dt) :  res == 0.00866329
+Newt,GMRES == 1,337, f(u, N, dt, f_u, flags, dt) :  res == 0.00865983
+Newt,GMRES == 1,338, f(u, N, dt, f_u, flags, dt) :  res == 0.00864155
+Newt,GMRES == 1,339, f(u, N, dt, f_u, flags, dt) :  res == 0.00861735
+Newt,GMRES == 1,340, f(u, N, dt, f_u, flags, dt) :  res == 0.0086068
+Newt,GMRES == 1,341, f(u, N, dt, f_u, flags, dt) :  res == 0.00859635
+Newt,GMRES == 1,342, f(u, N, dt, f_u, flags, dt) :  res == 0.00859569
+Newt,GMRES == 1,343, f(u, N, dt, f_u, flags, dt) :  res == 0.00859361
+Newt,GMRES == 1,344, f(u, N, dt, f_u, flags, dt) :  res == 0.00859096
+Newt,GMRES == 1,345, f(u, N, dt, f_u, flags, dt) :  res == 0.00858998
+Newt,GMRES == 1,346, f(u, N, dt, f_u, flags, dt) :  res == 0.00858997
+Newt,GMRES == 1,347, f(u, N, dt, f_u, flags, dt) :  res == 0.00858993
+Newt,GMRES == 1,348, f(u, N, dt, f_u, flags, dt) :  res == 0.0085855
+Newt,GMRES == 1,349, f(u, N, dt, f_u, flags, dt) :  res == 0.00856271
+Newt,GMRES == 1,350, f(u, N, dt, f_u, flags, dt) :  res == 0.00853567
+Newt,GMRES == 1,351, f(u, N, dt, f_u, flags, dt) :  res == 0.00853451
+Newt,GMRES == 1,352, f(u, N, dt, f_u, flags, dt) :  res == 0.00852353
+Newt,GMRES == 1,353, f(u, N, dt, f_u, flags, dt) :  res == 0.00848903
+Newt,GMRES == 1,354, f(u, N, dt, f_u, flags, dt) :  res == 0.00847691
+Newt,GMRES == 1,355, f(u, N, dt, f_u, flags, dt) :  res == 0.00847628
+Newt,GMRES == 1,356, f(u, N, dt, f_u, flags, dt) :  res == 0.00846896
+Newt,GMRES == 1,357, f(u, N, dt, f_u, flags, dt) :  res == 0.00846213
+Newt,GMRES == 1,358, f(u, N, dt, f_u, flags, dt) :  res == 0.00846074
+Newt,GMRES == 1,359, f(u, N, dt, f_u, flags, dt) :  res == 0.00845691
+Newt,GMRES == 1,360, f(u, N, dt, f_u, flags, dt) :  res == 0.00844852
+Newt,GMRES == 1,361, f(u, N, dt, f_u, flags, dt) :  res == 0.00844783
+Newt,GMRES == 1,362, f(u, N, dt, f_u, flags, dt) :  res == 0.00843932
+Newt,GMRES == 1,363, f(u, N, dt, f_u, flags, dt) :  res == 0.0084328
+Newt,GMRES == 1,364, f(u, N, dt, f_u, flags, dt) :  res == 0.00843244
+Newt,GMRES == 1,365, f(u, N, dt, f_u, flags, dt) :  res == 0.00843107
+Newt,GMRES == 1,366, f(u, N, dt, f_u, flags, dt) :  res == 0.00842985
+Newt,GMRES == 1,367, f(u, N, dt, f_u, flags, dt) :  res == 0.0084142
+Newt,GMRES == 1,368, f(u, N, dt, f_u, flags, dt) :  res == 0.00841371
+Newt,GMRES == 1,369, f(u, N, dt, f_u, flags, dt) :  res == 0.0084121
+Newt,GMRES == 1,370, f(u, N, dt, f_u, flags, dt) :  res == 0.0084063
+Newt,GMRES == 1,371, f(u, N, dt, f_u, flags, dt) :  res == 0.00840619
+Newt,GMRES == 1,372, f(u, N, dt, f_u, flags, dt) :  res == 0.00840587
+Newt,GMRES == 1,373, f(u, N, dt, f_u, flags, dt) :  res == 0.00840445
+Newt,GMRES == 1,374, f(u, N, dt, f_u, flags, dt) :  res == 0.00840191
+Newt,GMRES == 1,375, f(u, N, dt, f_u, flags, dt) :  res == 0.00838691
+Newt,GMRES == 1,376, f(u, N, dt, f_u, flags, dt) :  res == 0.00838523
+Newt,GMRES == 1,377, f(u, N, dt, f_u, flags, dt) :  res == 0.00837158
+Newt,GMRES == 1,378, f(u, N, dt, f_u, flags, dt) :  res == 0.00837106
+Newt,GMRES == 1,379, f(u, N, dt, f_u, flags, dt) :  res == 0.00832693
+Newt,GMRES == 1,380, f(u, N, dt, f_u, flags, dt) :  res == 0.00832686
+Newt,GMRES == 1,381, f(u, N, dt, f_u, flags, dt) :  res == 0.00826874
+Newt,GMRES == 1,382, f(u, N, dt, f_u, flags, dt) :  res == 0.00821632
+Newt,GMRES == 1,383, f(u, N, dt, f_u, flags, dt) :  res == 0.00818923
+Newt,GMRES == 1,384, f(u, N, dt, f_u, flags, dt) :  res == 0.00800138
+Newt,GMRES == 1,385, f(u, N, dt, f_u, flags, dt) :  res == 0.00796161
+Newt,GMRES == 1,386, f(u, N, dt, f_u, flags, dt) :  res == 0.00779705
+Newt,GMRES == 1,387, f(u, N, dt, f_u, flags, dt) :  res == 0.00778365
+Newt,GMRES == 1,388, f(u, N, dt, f_u, flags, dt) :  res == 0.00770568
+Newt,GMRES == 1,389, f(u, N, dt, f_u, flags, dt) :  res == 0.00768132
+Newt,GMRES == 1,390, f(u, N, dt, f_u, flags, dt) :  res == 0.00762274
+Newt,GMRES == 1,391, f(u, N, dt, f_u, flags, dt) :  res == 0.00761767
+Newt,GMRES == 1,392, f(u, N, dt, f_u, flags, dt) :  res == 0.00747817
+Newt,GMRES == 1,393, f(u, N, dt, f_u, flags, dt) :  res == 0.00739451
+Newt,GMRES == 1,394, f(u, N, dt, f_u, flags, dt) :  res == 0.00719611
+Newt,GMRES == 1,395, f(u, N, dt, f_u, flags, dt) :  res == 0.00712917
+Newt,GMRES == 1,396, f(u, N, dt, f_u, flags, dt) :  res == 0.00710302
+Newt,GMRES == 1,397, f(u, N, dt, f_u, flags, dt) :  res == 0.00697879
+Newt,GMRES == 1,398, f(u, N, dt, f_u, flags, dt) :  res == 0.00697368
+Newt,GMRES == 1,399, f(u, N, dt, f_u, flags, dt) :  res == 0.00696144
+Newt,GMRES == 1,400, f(u, N, dt, f_u, flags, dt) :  res == 0.00685041
+Newt,GMRES == 1,401, f(u, N, dt, f_u, flags, dt) :  res == 0.00681609
+Newt,GMRES == 1,402, f(u, N, dt, f_u, flags, dt) :  res == 0.00679265
+Newt,GMRES == 1,403, f(u, N, dt, f_u, flags, dt) :  res == 0.00664243
+Newt,GMRES == 1,404, f(u, N, dt, f_u, flags, dt) :  res == 0.00660861
+Newt,GMRES == 1,405, f(u, N, dt, f_u, flags, dt) :  res == 0.00642303
+Newt,GMRES == 1,406, f(u, N, dt, f_u, flags, dt) :  res == 0.0063652
+Newt,GMRES == 1,407, f(u, N, dt, f_u, flags, dt) :  res == 0.0061649
+Newt,GMRES == 1,408, f(u, N, dt, f_u, flags, dt) :  res == 0.00606928
+Newt,GMRES == 1,409, f(u, N, dt, f_u, flags, dt) :  res == 0.00601564
+Newt,GMRES == 1,410, f(u, N, dt, f_u, flags, dt) :  res == 0.00589479
+Newt,GMRES == 1,411, f(u, N, dt, f_u, flags, dt) :  res == 0.00579189
+Newt,GMRES == 1,412, f(u, N, dt, f_u, flags, dt) :  res == 0.00505164
+Newt,GMRES == 1,413, f(u, N, dt, f_u, flags, dt) :  res == 0.00449878
+Newt,GMRES == 1,414, f(u, N, dt, f_u, flags, dt) :  res == 0.00448229
+Newt,GMRES == 1,415, f(u, N, dt, f_u, flags, dt) :  res == 0.00426235
+Newt,GMRES == 1,416, f(u, N, dt, f_u, flags, dt) :  res == 0.00422301
+Newt,GMRES == 1,417, f(u, N, dt, f_u, flags, dt) :  res == 0.00422085
+Newt,GMRES == 1,418, f(u, N, dt, f_u, flags, dt) :  res == 0.00422074
+Newt,GMRES == 1,419, f(u, N, dt, f_u, flags, dt) :  res == 0.00420794
+Newt,GMRES == 1,420, f(u, N, dt, f_u, flags, dt) :  res == 0.00419913
+Newt,GMRES == 1,421, f(u, N, dt, f_u, flags, dt) :  res == 0.00408481
+Newt,GMRES == 1,422, f(u, N, dt, f_u, flags, dt) :  res == 0.00403439
+Newt,GMRES == 1,423, f(u, N, dt, f_u, flags, dt) :  res == 0.00393731
+Newt,GMRES == 1,424, f(u, N, dt, f_u, flags, dt) :  res == 0.00386434
+Newt,GMRES == 1,425, f(u, N, dt, f_u, flags, dt) :  res == 0.00381282
+Newt,GMRES == 1,426, f(u, N, dt, f_u, flags, dt) :  res == 0.00365464
+Newt,GMRES == 1,427, f(u, N, dt, f_u, flags, dt) :  res == 0.00348762
+Newt,GMRES == 1,428, f(u, N, dt, f_u, flags, dt) :  res == 0.00347445
+Newt,GMRES == 1,429, f(u, N, dt, f_u, flags, dt) :  res == 0.00327189
+Newt,GMRES == 1,430, f(u, N, dt, f_u, flags, dt) :  res == 0.00309182
+Newt,GMRES == 1,431, f(u, N, dt, f_u, flags, dt) :  res == 0.00309115
+Newt,GMRES == 1,432, f(u, N, dt, f_u, flags, dt) :  res == 0.00284281
+Newt,GMRES == 1,433, f(u, N, dt, f_u, flags, dt) :  res == 0.00262882
+Newt,GMRES == 1,434, f(u, N, dt, f_u, flags, dt) :  res == 0.00261303
+Newt,GMRES == 1,435, f(u, N, dt, f_u, flags, dt) :  res == 0.00252637
+Newt,GMRES == 1,436, f(u, N, dt, f_u, flags, dt) :  res == 0.0024051
+Newt,GMRES == 1,437, f(u, N, dt, f_u, flags, dt) :  res == 0.00235886
+Newt,GMRES == 1,438, f(u, N, dt, f_u, flags, dt) :  res == 0.0021961
+Newt,GMRES == 1,439, f(u, N, dt, f_u, flags, dt) :  res == 0.00219553
+Newt,GMRES == 1,440, f(u, N, dt, f_u, flags, dt) :  res == 0.00205029
+Newt,GMRES == 1,441, f(u, N, dt, f_u, flags, dt) :  res == 0.00196346
+Newt,GMRES == 1,442, f(u, N, dt, f_u, flags, dt) :  res == 0.00195934
+Newt,GMRES == 1,443, f(u, N, dt, f_u, flags, dt) :  res == 0.00193944
+Newt,GMRES == 1,444, f(u, N, dt, f_u, flags, dt) :  res == 0.00188438
+Newt,GMRES == 1,445, f(u, N, dt, f_u, flags, dt) :  res == 0.00187712
+Newt,GMRES == 1,446, f(u, N, dt, f_u, flags, dt) :  res == 0.00165465
+Newt,GMRES == 1,447, f(u, N, dt, f_u, flags, dt) :  res == 0.00164887
+Newt,GMRES == 1,448, f(u, N, dt, f_u, flags, dt) :  res == 0.0014478
+Newt,GMRES == 1,449, f(u, N, dt, f_u, flags, dt) :  res == 0.00129016
+Newt,GMRES == 1,450, f(u, N, dt, f_u, flags, dt) :  res == 0.00127718
+Newt,GMRES == 1,451, f(u, N, dt, f_u, flags, dt) :  res == 0.00126014
+Newt,GMRES == 1,452, f(u, N, dt, f_u, flags, dt) :  res == 0.0012225
+Newt,GMRES == 1,453, f(u, N, dt, f_u, flags, dt) :  res == 0.00117349
+Newt,GMRES == 1,454, f(u, N, dt, f_u, flags, dt) :  res == 0.00115962
+Newt,GMRES == 1,455, f(u, N, dt, f_u, flags, dt) :  res == 0.00114606
+Newt,GMRES == 1,456, f(u, N, dt, f_u, flags, dt) :  res == 0.0010046
+Newt,GMRES == 1,457, f(u, N, dt, f_u, flags, dt) :  res == 0.000857468
+GMRES converged. Breaking.
+------------------------------------------------
+Beginning hookstep calculations.
+-------------------------------------------
+Hookstep number 0
+delta == 0.01
+Newton step is within trust region: 
+L2Norm(dxN) == 8.76704e-05 <= 0.01 == delta
+Computing residual of hookstep dxH
+L2Norm(dxH) == 8.76704e-05
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 2.09433e-12, 3.77477e-12
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   2.09433e-12 residual at current position
+rH       ==   3.77477e-12 residual of newton/hookstep
+Delta_rH ==   1.68044e-12 actual improvement in residual from newton/hookstep
+
+Delta_rH ==   1.68044e-12 ------> Unacceptable <------ 
+             -5.65146e-15 lower bound for acceptable improvement
+              1.43763e-12 upper bound for ok improvement.
+              1.07822e-11 upper bound for good improvement.
+               1.5814e-11 upper bound for accurate prediction.
+              1.29387e-11 lower bound for accurate prediction.
+             -5.65146e-12 local linear model of improvement
+lambda       == 0.385402 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 0.00385402 is the delta suggested by quadratic model
+Improvement is unacceptable.
+No backup step is available.
+Reduce trust region by minimizing local quadratic model and recompute hookstep.
+  old delta == 0.01
+  new delta == 0.00385402
+delta new == 0.00385402
+That delta is still bigger than the Newton step.
+Reducing delta to half the length of the Newton step.
+  old delta == 0.00385402
+  new delta == 4.38352e-05
+-------------------------------------------
+Hookstep number 1
+delta == 4.38352e-05
+Newton step is outside trust region: 
+L2Norm(dxN) == 8.76704e-05 > 4.38352e-05 == delta
+Calculate hookstep dxH(mu) with radius L2Norm(dxH(mu)) == delta
+mu, L2Norm(dxH(mu)) == 0, 8.76704e-05
+mu, L2Norm(dxH(mu)) == 0.0171766, 5.01026e-05
+mu, L2Norm(dxH(mu)) == 0.0225508, 4.41813e-05
+mu, L2Norm(dxH(mu)) == 0.0229085, 4.38365e-05
+mu, L2Norm(dxH(mu)) == 0.0229099, 4.38352e-05
+Found hookstep of proper radius
+ndxHmu == 4.38352e-05 ~= 4.38352e-05 == delta 
+Computing residual of hookstep dxH
+L2Norm(dxH) == 4.38352e-05
+f(u, N, dt, f_u, flags, dt) : 
+r(x), r(x+dxH) == 2.09433e-12, 1.12337e-12
+Computing local quadratic model of residual
+f(u, N, dt, f_u, flags, dt) : 
+Determining what to do with current Newton/hookstep and trust region
+rx       ==   2.09433e-12 residual at current position
+rH       ==   1.12337e-12 residual of newton/hookstep
+Delta_rH ==  -9.70956e-13 actual improvement in residual from newton/hookstep
+
+             -2.80484e-15 lower bound for acceptable improvement
+              3.48028e-12 upper bound for ok improvement.
+              2.61021e-11 upper bound for good improvement.
+Delta_rH ==  -9.70956e-13 ------> Good <------
+              3.82831e-11 upper bound for accurate prediction.
+              3.13225e-11 lower bound for accurate prediction.
+             -2.80484e-12 local linear model of improvement
+lambda       == 0.764727 is the reduction/increase factor for delta suggested by quadratic model
+lambda*delta == 3.35219e-05 is the delta suggested by quadratic model
+Improvement is Good (some form of acceptable).
+Stop adjusting trust region and take a step because
+Improvement is merely Poor, Ok, or Good : 1
+Newton step is within trust region      : 0
+Backup step is better                   : 0
+Delta has reached local limit           : 0
+Take step and increase delta, if there's room.
+lambda == 0.764727 is too small. Resetting to lambda == 1
+  old delta == 4.38352e-05
+  new delta == 4.38352e-05
+
+Taking best step and continuing Newton iteration.
+L2Norm(G(x)) == 1.49891e-06
+rx           == 1.12337e-12
+L2Norm(dxN)  == 8.76704e-05
+L2Norm(dxOpt)== 4.38352e-05
+========================================================
+Newton iteration number 2
+Current state of Newton iteration:
+   fcount_newton   == 462
+   fcount_optimiza == 6
+   L2Norm(x)       == 0.0516782
+   L2Norm(dxN)     == 8.76704e-05
+   L2Norm(dxOpt)   == 4.38352e-05
+   L2Dist(x,x0)    == 0.000350422
+gx == L2Norm(G(x)) : 
+   initial  gx == 1.12691e-05
+   previous gx == 2.04662e-06
+   current  gx == 1.49891e-06
+rx == 1/2 L2Norm2(G(x)) : 
+   initial  rx == 6.34965e-11
+   previous rx == 2.09433e-12
+   current  rx == 1.12337e-12
+         delta == 4.38352e-05
+Newt,GMRES == 2,0, f(u, N, dt, f_u, flags, dt) :  res == 0.500532
+Newt,GMRES == 2,1, f(u, N, dt, f_u, flags, dt) :  res == 0.497542
+Newt,GMRES == 2,2, f(u, N, dt, f_u, flags, dt) :  res == 0.497539
+Newt,GMRES == 2,3, f(u, N, dt, f_u, flags, dt) :  res == 0.497374
+Newt,GMRES == 2,4, f(u, N, dt, f_u, flags, dt) :  res == 0.497366
+Newt,GMRES == 2,5, f(u, N, dt, f_u, flags, dt) :  res == 0.497307
+Newt,GMRES == 2,6, f(u, N, dt, f_u, flags, dt) :  res == 0.496217
+Newt,GMRES == 2,7, f(u, N, dt, f_u, flags, dt) :  res == 0.495739
+Newt,GMRES == 2,8, f(u, N, dt, f_u, flags, dt) :  res == 0.495503
+Newt,GMRES == 2,9, f(u, N, dt, f_u, flags, dt) :  res == 0.495498
+Newt,GMRES == 2,10, f(u, N, dt, f_u, flags, dt) :  res == 0.495478
+Newt,GMRES == 2,11, f(u, N, dt, f_u, flags, dt) :  res == 0.495455
+Newt,GMRES == 2,12, f(u, N, dt, f_u, flags, dt) :  res == 0.49528
+Newt,GMRES == 2,13, f(u, N, dt, f_u, flags, dt) :  res == 0.495151
+Newt,GMRES == 2,14, f(u, N, dt, f_u, flags, dt) :  res == 0.495034
+Newt,GMRES == 2,15, f(u, N, dt, f_u, flags, dt) :  res == 0.494675
+Newt,GMRES == 2,16, f(u, N, dt, f_u, flags, dt) :  res == 0.49464
+Newt,GMRES == 2,17, f(u, N, dt, f_u, flags, dt) :  res == 0.494517
+Newt,GMRES == 2,18, f(u, N, dt, f_u, flags, dt) :  res == 0.494452
+Newt,GMRES == 2,19, f(u, N, dt, f_u, flags, dt) :  res == 0.494412
+Newt,GMRES == 2,20, f(u, N, dt, f_u, flags, dt) :  res == 0.49439
+Newt,GMRES == 2,21, f(u, N, dt, f_u, flags, dt) :  res == 0.494304
+Newt,GMRES == 2,22, f(u, N, dt, f_u, flags, dt) :  res == 0.494219
+Newt,GMRES == 2,23, f(u, N, dt, f_u, flags, dt) :  res == 0.494057
+Newt,GMRES == 2,24, f(u, N, dt, f_u, flags, dt) :  res == 0.494057
+Newt,GMRES == 2,25, f(u, N, dt, f_u, flags, dt) :  res == 0.493983
+Newt,GMRES == 2,26, f(u, N, dt, f_u, flags, dt) :  res == 0.493934
+Newt,GMRES == 2,27, f(u, N, dt, f_u, flags, dt) :  res == 0.493931
+Newt,GMRES == 2,28, f(u, N, dt, f_u, flags, dt) :  res == 0.493809
+Newt,GMRES == 2,29, f(u, N, dt, f_u, flags, dt) :  res == 0.493808
+Newt,GMRES == 2,30, f(u, N, dt, f_u, flags, dt) :  res == 0.493723
+Newt,GMRES == 2,31, f(u, N, dt, f_u, flags, dt) :  res == 0.493723
+Newt,GMRES == 2,32, f(u, N, dt, f_u, flags, dt) :  res == 0.493723
+Newt,GMRES == 2,33, f(u, N, dt, f_u, flags, dt) :  res == 0.493658
+Newt,GMRES == 2,34, f(u, N, dt, f_u, flags, dt) :  res == 0.493586
+Newt,GMRES == 2,35, f(u, N, dt, f_u, flags, dt) :  res == 0.493531
+Newt,GMRES == 2,36, f(u, N, dt, f_u, flags, dt) :  res == 0.493425
+Newt,GMRES == 2,37, f(u, N, dt, f_u, flags, dt) :  res == 0.493317
+Newt,GMRES == 2,38, f(u, N, dt, f_u, flags, dt) :  res == 0.493315
+Newt,GMRES == 2,39, f(u, N, dt, f_u, flags, dt) :  res == 0.493242
+Newt,GMRES == 2,40, f(u, N, dt, f_u, flags, dt) :  res == 0.493241
+Newt,GMRES == 2,41, f(u, N, dt, f_u, flags, dt) :  res == 0.493204
+Newt,GMRES == 2,42, f(u, N, dt, f_u, flags, dt) :  res == 0.492834
+Newt,GMRES == 2,43, f(u, N, dt, f_u, flags, dt) :  res == 0.492617
+Newt,GMRES == 2,44, f(u, N, dt, f_u, flags, dt) :  res == 0.492605
+Newt,GMRES == 2,45, f(u, N, dt, f_u, flags, dt) :  res == 0.492605
+Newt,GMRES == 2,46, f(u, N, dt, f_u, flags, dt) :  res == 0.492605
+Newt,GMRES == 2,47, f(u, N, dt, f_u, flags, dt) :  res == 0.492601
+Newt,GMRES == 2,48, f(u, N, dt, f_u, flags, dt) :  res == 0.492601
+Newt,GMRES == 2,49, f(u, N, dt, f_u, flags, dt) :  res == 0.492593
+Newt,GMRES == 2,50, f(u, N, dt, f_u, flags, dt) :  res == 0.492588
+Newt,GMRES == 2,51, f(u, N, dt, f_u, flags, dt) :  res == 0.492577
+Newt,GMRES == 2,52, f(u, N, dt, f_u, flags, dt) :  res == 0.492576
+Newt,GMRES == 2,53, f(u, N, dt, f_u, flags, dt) :  res == 0.492513
+Newt,GMRES == 2,54, f(u, N, dt, f_u, flags, dt) :  res == 0.492462
+Newt,GMRES == 2,55, f(u, N, dt, f_u, flags, dt) :  res == 0.492427
+Newt,GMRES == 2,56, f(u, N, dt, f_u, flags, dt) :  res == 0.492419
+Newt,GMRES == 2,57, f(u, N, dt, f_u, flags, dt) :  res == 0.492351
+Newt,GMRES == 2,58, f(u, N, dt, f_u, flags, dt) :  res == 0.492294
+Newt,GMRES == 2,59, f(u, N, dt, f_u, flags, dt) :  res == 0.492287
+Newt,GMRES == 2,60, f(u, N, dt, f_u, flags, dt) :  res == 0.492287
+Newt,GMRES == 2,61, f(u, N, dt, f_u, flags, dt) :  res == 0.492227
+Newt,GMRES == 2,62, f(u, N, dt, f_u, flags, dt) :  res == 0.492129
+Newt,GMRES == 2,63, f(u, N, dt, f_u, flags, dt) :  res == 0.492071
+Newt,GMRES == 2,64, f(u, N, dt, f_u, flags, dt) :  res == 0.492071
+Newt,GMRES == 2,65, f(u, N, dt, f_u, flags, dt) :  res == 0.492069
+Newt,GMRES == 2,66, f(u, N, dt, f_u, flags, dt) :  res == 0.492061
+Newt,GMRES == 2,67, f(u, N, dt, f_u, flags, dt) :  res == 0.492059
+Newt,GMRES == 2,68, f(u, N, dt, f_u, flags, dt) :  res == 0.492059
+Newt,GMRES == 2,69, f(u, N, dt, f_u, flags, dt) :  res == 0.492034
+Newt,GMRES == 2,70, f(u, N, dt, f_u, flags, dt) :  res == 0.491977
+Newt,GMRES == 2,71, f(u, N, dt, f_u, flags, dt) :  res == 0.491953
+Newt,GMRES == 2,72, f(u, N, dt, f_u, flags, dt) :  res == 0.49195
+Newt,GMRES == 2,73, f(u, N, dt, f_u, flags, dt) :  res == 0.491938
+Newt,GMRES == 2,74, f(u, N, dt, f_u, flags, dt) :  res == 0.491938
+Newt,GMRES == 2,75, f(u, N, dt, f_u, flags, dt) :  res == 0.491918
+Newt,GMRES == 2,76, f(u, N, dt, f_u, flags, dt) :  res == 0.491916
+Newt,GMRES == 2,77, f(u, N, dt, f_u, flags, dt) :  res == 0.491915
+Newt,GMRES == 2,78, f(u, N, dt, f_u, flags, dt) :  res == 0.491898
+Newt,GMRES == 2,79, f(u, N, dt, f_u, flags, dt) :  res == 0.491862
+Newt,GMRES == 2,80, f(u, N, dt, f_u, flags, dt) :  res == 0.491862
+Newt,GMRES == 2,81, f(u, N, dt, f_u, flags, dt) :  res == 0.491862
+Newt,GMRES == 2,82, f(u, N, dt, f_u, flags, dt) :  res == 0.491862
+Newt,GMRES == 2,83, f(u, N, dt, f_u, flags, dt) :  res == 0.491847
+Newt,GMRES == 2,84, f(u, N, dt, f_u, flags, dt) :  res == 0.491824
+Newt,GMRES == 2,85, f(u, N, dt, f_u, flags, dt) :  res == 0.491817
+Newt,GMRES == 2,86, f(u, N, dt, f_u, flags, dt) :  res == 0.491807
+Newt,GMRES == 2,87, f(u, N, dt, f_u, flags, dt) :  res == 0.491804
+Newt,GMRES == 2,88, f(u, N, dt, f_u, flags, dt) :  res == 0.4918
+Newt,GMRES == 2,89, f(u, N, dt, f_u, flags, dt) :  res == 0.491799
+Newt,GMRES == 2,90, f(u, N, dt, f_u, flags, dt) :  res == 0.491791
+Newt,GMRES == 2,91, f(u, N, dt, f_u, flags, dt) :  res == 0.491791
+Newt,GMRES == 2,92, f(u, N, dt, f_u, flags, dt) :  res == 0.491781
+Newt,GMRES == 2,93, f(u, N, dt, f_u, flags, dt) :  res == 0.49178
+Newt,GMRES == 2,94, f(u, N, dt, f_u, flags, dt) :  res == 0.49178
+Newt,GMRES == 2,95, f(u, N, dt, f_u, flags, dt) :  res == 0.491773
+Newt,GMRES == 2,96, f(u, N, dt, f_u, flags, dt) :  res == 0.491767
+Newt,GMRES == 2,97, f(u, N, dt, f_u, flags, dt) :  res == 0.491694
+Newt,GMRES == 2,98, f(u, N, dt, f_u, flags, dt) :  res == 0.491624
+Newt,GMRES == 2,99, f(u, N, dt, f_u, flags, dt) :  res == 0.491616
+Newt,GMRES == 2,100, f(u, N, dt, f_u, flags, dt) :  res == 0.491576
+Newt,GMRES == 2,101, f(u, N, dt, f_u, flags, dt) :  res == 0.491576
+Newt,GMRES == 2,102, f(u, N, dt, f_u, flags, dt) :  res == 0.491575
+Newt,GMRES == 2,103, f(u, N, dt, f_u, flags, dt) :  res == 0.491534
+Newt,GMRES == 2,104, f(u, N, dt, f_u, flags, dt) :  res == 0.491343
+Newt,GMRES == 2,105, f(u, N, dt, f_u, flags, dt) :  res == 0.491331
+Newt,GMRES == 2,106, f(u, N, dt, f_u, flags, dt) :  res == 0.491329
+Newt,GMRES == 2,107, f(u, N, dt, f_u, flags, dt) :  res == 0.491323
+Newt,GMRES == 2,108, f(u, N, dt, f_u, flags, dt) :  res == 0.491293
+Newt,GMRES == 2,109, f(u, N, dt, f_u, flags, dt) :  res == 0.491287
+Newt,GMRES == 2,110, f(u, N, dt, f_u, flags, dt) :  res == 0.491232
+Newt,GMRES == 2,111, f(u, N, dt, f_u, flags, dt) :  res == 0.491227
+Newt,GMRES == 2,112, f(u, N, dt, f_u, flags, dt) :  res == 0.491227
+Newt,GMRES == 2,113, f(u, N, dt, f_u, flags, dt) :  res == 0.491213
+Newt,GMRES == 2,114, f(u, N, dt, f_u, flags, dt) :  res == 0.491207
+Newt,GMRES == 2,115, f(u, N, dt, f_u, flags, dt) :  res == 0.491199
+Newt,GMRES == 2,116, f(u, N, dt, f_u, flags, dt) :  res == 0.491167
+Newt,GMRES == 2,117, f(u, N, dt, f_u, flags, dt) :  res == 0.491097
+Newt,GMRES == 2,118, f(u, N, dt, f_u, flags, dt) :  res == 0.491083
+Newt,GMRES == 2,119, f(u, N, dt, f_u, flags, dt) :  res == 0.491082
+Newt,GMRES == 2,120, f(u, N, dt, f_u, flags, dt) :  res == 0.491082
+Newt,GMRES == 2,121, f(u, N, dt, f_u, flags, dt) :  res == 0.49107
+Newt,GMRES == 2,122, f(u, N, dt, f_u, flags, dt) :  res == 0.491068
+Newt,GMRES == 2,123, f(u, N, dt, f_u, flags, dt) :  res == 0.491003
+Newt,GMRES == 2,124, f(u, N, dt, f_u, flags, dt) :  res == 0.490993
+Newt,GMRES == 2,125, f(u, N, dt, f_u, flags, dt) :  res == 0.490971
+Newt,GMRES == 2,126, f(u, N, dt, f_u, flags, dt) :  res == 0.490819
+Newt,GMRES == 2,127, f(u, N, dt, f_u, flags, dt) :  res == 0.490663
+Newt,GMRES == 2,128, f(u, N, dt, f_u, flags, dt) :  res == 0.49049
+Newt,GMRES == 2,129, f(u, N, dt, f_u, flags, dt) :  res == 0.49049
+Newt,GMRES == 2,130, f(u, N, dt, f_u, flags, dt) :  res == 0.490489
+Newt,GMRES == 2,131, f(u, N, dt, f_u, flags, dt) :  res == 0.490457
+Newt,GMRES == 2,132, f(u, N, dt, f_u, flags, dt) :  res == 0.490456
+Newt,GMRES == 2,133, f(u, N, dt, f_u, flags, dt) :  res == 0.490421
+Newt,GMRES == 2,134, f(u, N, dt, f_u, flags, dt) :  res == 0.49042
+Newt,GMRES == 2,135, f(u, N, dt, f_u, flags, dt) :  res == 0.490395
+Newt,GMRES == 2,136, f(u, N, dt, f_u, flags, dt) :  res == 0.490384
+Newt,GMRES == 2,137, f(u, N, dt, f_u, flags, dt) :  res == 0.490303
+Newt,GMRES == 2,138, f(u, N, dt, f_u, flags, dt) :  res == 0.490303
+Newt,GMRES == 2,139, f(u, N, dt, f_u, flags, dt) :  res == 0.490277
+Newt,GMRES == 2,140, f(u, N, dt, f_u, flags, dt) :  res == 0.490274
+Newt,GMRES == 2,141, f(u, N, dt, f_u, flags, dt) :  res == 0.490273
+Newt,GMRES == 2,142, f(u, N, dt, f_u, flags, dt) :  res == 0.490266
+Newt,GMRES == 2,143, f(u, N, dt, f_u, flags, dt) :  res == 0.490257
+Newt,GMRES == 2,144, f(u, N, dt, f_u, flags, dt) :  res == 0.490254
+Newt,GMRES == 2,145, f(u, N, dt, f_u, flags, dt) :  res == 0.490252
+Newt,GMRES == 2,146, f(u, N, dt, f_u, flags, dt) :  res == 0.490247
+Newt,GMRES == 2,147, f(u, N, dt, f_u, flags, dt) :  res == 0.490241
+Newt,GMRES == 2,148, f(u, N, dt, f_u, flags, dt) :  res == 0.490231
+Newt,GMRES == 2,149, f(u, N, dt, f_u, flags, dt) :  res == 0.490119
+Newt,GMRES == 2,150, f(u, N, dt, f_u, flags, dt) :  res == 0.490106
+Newt,GMRES == 2,151, f(u, N, dt, f_u, flags, dt) :  res == 0.490078
+Newt,GMRES == 2,152, f(u, N, dt, f_u, flags, dt) :  res == 0.490077
+Newt,GMRES == 2,153, f(u, N, dt, f_u, flags, dt) :  res == 0.490077
+Newt,GMRES == 2,154, f(u, N, dt, f_u, flags, dt) :  res == 0.490033
+Newt,GMRES == 2,155, f(u, N, dt, f_u, flags, dt) :  res == 0.489979
+Newt,GMRES == 2,156, f(u, N, dt, f_u, flags, dt) :  res == 0.489979
+Newt,GMRES == 2,157, f(u, N, dt, f_u, flags, dt) : 

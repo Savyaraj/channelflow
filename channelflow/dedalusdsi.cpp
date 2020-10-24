@@ -85,14 +85,23 @@ void dedalusDSI::updateMu(Real mu){
 void dedalusDSI::save_array(FlowField& u){
 
     u.makePhysical();
-	float* Array = new float[u.Nx()];
-	for (int nx=0; nx<u.Nx(); ++nx){
-        Array[nx] = u(nx, 2, 0, 2);
-    }
+    int len_u = u.Nx()*u.Ny()*u.Nz()*u.Nd();
+	float* Array = new float[len_u];
+    int ind = 0;
+	for (int i=0; i<u.Nd(); ++i){
+		for (int ny=0; ny<u.Ny(); ++ny){
+			for (int nx=0; nx<u.Nx(); ++nx){
+				for (int nz=0; nz<u.Nz(); ++nz){
+                    Array[ind] = u(nx,ny,nz,i);
+                    ind++;
+				}
+			}
+		}
+	}
 
     PyObject *py_array;
 	float *ptr = Array;
-	npy_intp dims[1] = { u.Nx() };
+	npy_intp dims[1] = { len_u };
 	py_array = PyArray_SimpleNewFromData(1, dims, NPY_FLOAT, ptr);
 	PyObject *method =  PyUnicode_FromString("save_array");
 	PyObject_CallMethodObjArgs(de_, method, py_array, NULL);
