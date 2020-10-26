@@ -66,9 +66,9 @@ class DedalusPy:
 
         #dynamics (-S)*dx(u+v) 
         self.problem.add_equation("dt(u) + dx(p) + a*u - Tau_0*(d(u,x=2) + d(u,y=2)) + Tau_2*(d(u,x=4) + d(u,y=4)) = \
-                                   -(1-S)*(u*dx(u) + v*dy(u)) + (-S/2)*dx(u*u) - b*(u*u+v*v)*u")
+                                   -(1-S)*(u*dx(u) + v*dy(u)) + (-S/2)*dx(u*u+v*v) - b*(u*u+v*v)*u")
         self.problem.add_equation("dt(v) + dy(p) + a*v - Tau_0*(d(v,x=2) + d(v,y=2)) + Tau_2*(d(v,x=4) + d(v,y=4)) = \
-                                   -(1-S)*(u*dx(v) + v*dy(v)) + (-S/2)*dy(v*v) - b*(u*u+v*v)*v") 
+                                   -(1-S)*(u*dx(v) + v*dy(v)) + (-S/2)*dy(u*u+v*v) - b*(u*u+v*v)*v") 
         # self.problem.add_equation("dt(u) + dx(p) + a*u - Tau_0*d(u,x=2) + Tau_2*d(u,x=4) = 0")
         # self.problem.add_equation("dt(v) + dy(p) + a*v - Tau_0*d(v,y=2) + Tau_2*d(v,y=4) = 0")
 
